@@ -65,14 +65,16 @@ class Booking(models.Model):
     user = models.ForeignKey(
             User, on_delete=models.CASCADE, related_name='table_booking')
     name = models.CharField(max_length=80)
-    email = models.EmailField(blank=True)
-    phone = models.IntegerField(blank=True)
-    booked_date = models.DateField()
+    email = models.EmailField(blank=False)
+    phone = models.IntegerField(blank=False)
+    booked_date = models.DateField(blank=False)
     booked_time = models.TimeField(default='19.30', choices=TIME)
     number_guest = models.PositiveIntegerField(choices=GUEST, default='2')
+    booking_status = models.IntegerField(choices=BOOKING_STATUS, default=0)
 
     class Meta:
-        ordering = ['-booked_date'] 
-   
+        ordering = ['-booked_date']
+
     def __str__(self):
-        return f"{self.name} booked on {self.booked_date} {self.booked_time}"
+        return f"Booked the table on {self.booked_date} {self.booked_time}\
+                by {self.name}"
