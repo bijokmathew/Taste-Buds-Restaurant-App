@@ -67,8 +67,12 @@
                     <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
                     <li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
                     <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-                    <li><a class="nav-link scrollto" href="#specials">SignUp</a></li>
-                    <li><a class="nav-link scrollto" href="#specials">SignIn</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a class="nav-link scrollto" href="{% url 'account_logout' %}">SignOut</a></li>
+                    {% else %}
+                    <li><a class="nav-link scrollto" href="{% url 'account_signup' %}">SignUp</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'account_login' %}">SignIn</a></li>
+                    {% endif %}
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
