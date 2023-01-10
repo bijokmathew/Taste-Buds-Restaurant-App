@@ -3,6 +3,6 @@ from django.views import View, generic
 from .models import Booking
 
 
-class base(generic.ListView):
+class Home(generic.ListView):
     model = Booking
     template_name = 'index.html'
