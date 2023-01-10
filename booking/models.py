@@ -41,21 +41,21 @@ TIME = (
 # as dropdown list in the booking form
 
 GUEST = {
-    ('1', '1'),
-    ('2', '2'),
-    ('3', '3'),
-    ('4', '4'),
-    ('5', '5'),
-    ('6', '6'),
-    ('7', '7'),
+    (1, '1'),
+    (2, '2'),
+    (3, '3'),
+    (4, '4'),
+    (5, '5'),
+    (6, '6'),
+    (7, '7'),
 }
 
 
 class Booking(models.Model):
     """
-    Booking table stores the name, email, mobile number,
-    number of guest, date and time of booking in to the 
-    postgresql db. By default the booking status is 'pending'and 
+    Booking table stores the name, email, number of guest
+    date and time of booking in to the postgresql db.
+    By default the booking status is 'pending'and
     this is controlled by the field 'status' in the table
 
     Booking table is sorted according the descending order of booking
@@ -66,10 +66,10 @@ class Booking(models.Model):
             User, on_delete=models.CASCADE, related_name='table_booking')
     name = models.CharField(max_length=80)
     email = models.EmailField(blank=False)
-    phone = models.IntegerField(blank=False, null=True)
     booked_date = models.DateField(blank=False)
-    booked_time = models.TimeField(default='19.30', choices=TIME)
-    number_guest = models.PositiveIntegerField(choices=GUEST, default='2')
+    booked_time = models.CharField(
+                    max_length=50, default='19:30', choices=TIME)
+    number_guest = models.PositiveIntegerField(choices=GUEST, default=2)
     booking_status = models.IntegerField(choices=BOOKING_STATUS, default=0)
 
     class Meta:
