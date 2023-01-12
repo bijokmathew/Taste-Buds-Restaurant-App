@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="login-form">
+  <div class="container heigth pt-5">
+    <div class="row pt-5 mt-4">
+      <div class="col-md-8 offset-md-2 mt-4 pt-5">
+        {% if user.is_authenticated %}
+        <h1>Reserve your table here</h1>
+        <form method="post">
+          {% csrf_token %}
+          {{ booking_from.as_p }}
+          <button class="account-btn" type="submit">Done</button>
+        </form>
+
+        {% else %}
+        <p>
+          To make your reservation, please <a href="{% url 'account_login'%}">SignIn</a>. If you have not
+          create your account yet, then please <a href="{% url 'account_signup'%}">SignUp</a>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
