@@ -30,7 +30,7 @@ def reserve_table(request):
             booking_form = form.save(commit=False)
             booking_form.user = request.user
             booking_form.save()
-            return redirect('home')
+            return redirect('mybooking')
 
 
 class MyBooking(generic.ListView):
