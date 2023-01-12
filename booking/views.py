@@ -31,4 +31,17 @@ def reserve_table(request):
             booking_form.user = request.user
             booking_form.save()
             return redirect('home')
-    
+
+
+class MyBooking(generic.ListView):
+    model = Booking
+    template_name = 'mybooking.html'
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            booking_list = Booking.objects.filter(user=request.user)
+            context = {
+                'booking_list': booking_list
+            }
+            return render(request, "mybooking.html", context=context)
+

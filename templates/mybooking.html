@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for data in booking_list %}
+        {{data.booked_date}}
+    {% endfor %}
+{% endblock %}

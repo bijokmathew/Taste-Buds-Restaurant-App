@@ -69,6 +69,7 @@
                     <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
                     {% if user.is_authenticated %}
                     <li><a class="nav-link scrollto" href="{% url 'account_logout' %}">SignOut</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'mybooking' %}">My Bookings</a></li>
                     {% else %}
                     <li><a class="nav-link scrollto" href="{% url 'account_signup' %}">SignUp</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'account_login' %}">SignIn</a></li>
