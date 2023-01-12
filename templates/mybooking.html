@@ -1,6 +1,45 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% for data in booking_list %}
-        {{data.booked_date}}
-    {% endfor %}
+<div class="container-fluid mb-3 pt-2" style="top: 0;
+    background-color: black;">
+    <div class="row heigth" style="margin-top: 120px; background-color: white;">
+        <div class="col mt-5">
+            <h1 class="text-center">Booking Details</h1>
+            <p class="text-center">All upcoming reservations can be found here.</p>
+            <div class="row mt-5">
+                <!-- List all reservation belongs to the current user  -->
+                {% for booking in bookings %}
+                <div class="card col-md-2">
+                    <div class="card-body">
+                        <h5 class="card-title">{{booking.booked_date}} at {{booking.booked_time}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{booking.name}}</h6>
+                        <p class="card-text mt-5">
+                            <p><i class="far fa-envelope  "></i> {{ booking.email }}</p>
+                            <p class="card-text ">
+                                <p><span>Number of Guests:  </span> {{ booking.number_guest }}</p>
+                                <div class="h6">
+                                    <span> status:
+                                        {% if booking.booking_status == 0 %}
+                                        <span style="padding: 8px;; background-color: yellow;margin-left: 10px;">Pending </span>
+                                        {% elif ooking.booking_status == 1 %}
+                                        <span style="width: fit-content; background-color: green;">Confirmed </span>
+                                        {% else %}
+                                        <span style="width: fit-content; background-color: red;">Declined </span>
+                                        {% endif %}
+                                    </span>
+                                </div>
+                                <div style="margin-top: 50px;">
+                                    <a href="" class="btn btn-secondary text-right">Change</a>
+                                    <!-- Button trigger modal -->
+                                    <a href="" class="btn btn-warning text-right" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal_{{ booking.id }}">Delete</a>
+                                </div>
+                            </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

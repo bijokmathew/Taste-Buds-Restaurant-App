@@ -1667,3 +1667,19 @@ account-btn {
   color: white;
   opacity: 1;
 }
+
+.card {
+  margin-left: 20px;
+}
+
+.card-body h5{
+  font-weight: 700;
+  font-size: 16px;
+  font-family:sans-serif;
+
+}
+.card-body h6{
+  font-weight: 600;
+  font-size: 16px;
+  font-family:sans-serif;
+}

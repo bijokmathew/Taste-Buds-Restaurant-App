@@ -41,7 +41,7 @@ class MyBooking(generic.ListView):
         if request.user.is_authenticated:
             booking_list = Booking.objects.filter(user=request.user)
             context = {
-                'booking_list': booking_list
+                'bookings': booking_list
             }
             return render(request, "mybooking.html", context=context)
 
