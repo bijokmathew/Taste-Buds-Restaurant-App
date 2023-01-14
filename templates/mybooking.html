@@ -9,14 +9,14 @@
             <div class="row mt-5">
                 <!-- List all reservation belongs to the current user  -->
                 {% for booking in bookings %}
-                <div class="card col-md-2">
+                <div class="card col-md-3">
                     <div class="card-body">
                         <h5 class="card-title">{{booking.booked_date}} at {{booking.booked_time}}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{booking.name}}</h6>
                         <p class="card-text mt-5">
                             <p><i class="far fa-envelope  "></i> {{ booking.email }}</p>
                             <p class="card-text ">
-                                <p><span>Number of Guests:  </span> {{ booking.number_guest }}</p>
+                                <p><span>Guests:  </span> {{ booking.number_guest }}</p>
                                 <div class="h6">
                                     <span> status:
                                         {% if booking.booking_status == 0 %}

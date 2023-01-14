@@ -25,7 +25,7 @@ ___
 
 * Overall goal of this website, give nice presentation and customers can easily use the wesite, that generates an interest and curiosity to the customer to visit the restaurant. Customers can see the menu items, shefs details, events and they can contact to the retaurant for further details. Cutomer can easily find the busniness hours and contact number from the webpage. Also they can visit restaurants social media accouts.
 
-* This website gives options to Customer to create an account and they can signin to thier account for booking the table. Also cutomer can view all his booking and they can update/ delete booking in future.
+* This website gives options to Customer to create an account and they can sign-in to thier account for booking the table. Also cutomer can view all his booking and they can update/ delete booking in future.
      
 * Website administrator can view all reservations and he can accept or decline reservations as per business requirements.
 
