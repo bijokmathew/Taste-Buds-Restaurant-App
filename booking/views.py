@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View, generic
 from .models import Booking
 from .forms import BookingForm
@@ -45,3 +45,24 @@ class MyBooking(generic.ListView):
             }
             return render(request, "mybooking.html", context=context)
 
+
+def edit_mybooking(request, booking_id):
+    """
+    edit_mybooking used to modify the booking details
+    ** booking_id : this id passed from the my booking view
+    which is used to fetch the booking details from the booking
+    model.And pass these details in to the django form(BookingForm)
+    which helps to populate the required model fileds with corresponding
+    data in to the edit booking template 
+    """
+    booking_details = get_object_or_404(Booking, id=booking_id)
+    if request.method == 'GET':
+        form = BookingForm(instance=booking_details)
+        context = {
+            'booking_form': form
+        }
+    return render(request, "booking_edit.html", context=context)
+
+
+def delete_mybooking(request, booking_id):
+    return

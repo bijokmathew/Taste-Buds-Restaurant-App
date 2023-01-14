@@ -26,4 +26,5 @@ class BookingForm(forms.ModelForm):
         exclude = ('user', 'booking_status')
         widgets = {
                     'booked_date': DateInput()
-                }                
+                }
+             
