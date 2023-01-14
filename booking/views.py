@@ -61,7 +61,12 @@ def edit_mybooking(request, booking_id):
         context = {
             'booking_form': form
         }
-    return render(request, "booking_edit.html", context=context)
+        return render(request, "booking_edit.html", context=context)
+    elif request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking_details)
+        if form.is_valid():
+            form.save()
+            return redirect('mybooking')
 
 
 def delete_mybooking(request, booking_id):
