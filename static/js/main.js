@@ -75,13 +75,15 @@
   }
 
   /**
-   * Toggle .header-scrolled class to #header when page is scrolled
+   * Toggle .header-scrolled class to #header when page is scrolled or
+   * move to new page
    */
   let selectHeader = select('#header')
   let selectTopbar = select('#topbar')
+  let selectSection = select('#page-section')
   if (selectHeader) {
     const headerScrolled = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 100 || selectHeader ) {
         selectHeader.classList.add('header-scrolled')
         if (selectTopbar) {
           selectTopbar.classList.add('topbar-scrolled')
@@ -96,7 +98,7 @@
     window.addEventListener('load', headerScrolled)
     onscroll(document, headerScrolled)
   }
-
+  
   /**
    * Back to top button
    */

@@ -1,56 +1,46 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container-fluid mb-3 pt-2" style="top: 0;
-    background-color: black;">
-    <div class="row heigth" style="margin-top: 120px; background-color: white;">
-        <div class="col mt-5">
-            <h1 class="text-center">Booking Details</h1>
-            <p class="text-center">All upcoming reservations can be found here.</p>
-            <div class="row mt-4 mx-2">
-                <!-- List all reservation belongs to the current user  -->
-                {% for booking in bookings %}
-                <div class="col-md-3">
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <h5 class="card-title">{{booking.booked_date}} at {{booking.booked_time}}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">{{booking.name}}</h6>
-                            <p class="card-text mt-5">
-                                <p><i class="far fa-envelope  "></i> {{ booking.email }}</p>
-                                <p class="card-text ">
-                                    <p><span>Guests: </span> {{ booking.number_guest }}</p>
-                                    <div class="h6">
-                                        <span> status:
-                                            {% if booking.booking_status == 0 %}
-                                            <span
-                                                style="padding: 8px;; background-color: yellow;margin-left: 10px;">Pending
-                                            </span>
-                                            {% elif ooking.booking_status == 1 %}
-                                            <span style="width: fit-content; background-color: green;">Confirmed </span>
-                                            {% else %}
-                                            <span style="width: fit-content; background-color: red;">Declined </span>
-                                            {% endif %}
-                                        </span>
-                                    </div>
-                                    <div style="margin-top: 50px;">
-                                        <a href="/editbooking/{{booking.id}}" class="btn btn-secondary text-right">Edit</a>
-                                        <!-- Button trigger modal -->
-                                        <a href="/deletebooking/{{booking.id}}" class="btn btn-warning text-right" data-bs-toggle="modal"
-                                            data-bs-target="#deleteModal_{{ booking.id }}">Delete</a>
-                                    </div>
-                                </p>
+<!-- This is used for displaying the booking details, data is taken from the booking model -->
+<section id="mybooking">
+    <div class="container-fluid heigth">
+        <div class="section-title">
+            <h2> My<span> Booking</span></h2>
+            <p>All upcoming reservations can be found here.</p>
+        </div>
+        <div class="row">
+            <!-- List all reservation belongs to the current user  -->
+            {% for booking in bookings %}
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title text-center">{{booking.booked_date}} at {{booking.booked_time}}</h4>
+                        <h6 class="card-subtitle mb-2 text-muted text-center">{{booking.name}}</h6>
+                        <p class="card-text mt-5">
+                            <p><i class="far fa-envelope  "></i> {{ booking.email }}</p>
+                            <p><span>Guests: </span> {{ booking.number_guest }}</p>
+                            <div class="h6">
+                                <span> status:
+                                    {% if booking.booking_status == 0 %}
+                                    <span>Pending</span>
+                                    {% elif booking.booking_status == 1 %}
+                                    <span>Confirmed </span>
+                                    {% else %}
+                                    <span>Declined </span>
+                                    {% endif %}
+                                </span>
+                            </div>
+                        </p>
+                        <div class="mt-auto d-flex justify-content-end ">
+                            <a href="/editbooking/{{booking.id}}" class="btn btn-booking-view">Edit</a>
+                            <!-- Button trigger modal -->
+                            <a href="/deletebooking/{{booking.id}}" class="btn btn-booking-view mx-2"
+                                data-bs-toggle="modal" data-bs-target="#deleteModal_{{ booking.id }}">Delete</a>
                         </div>
                     </div>
                 </div>
-                <!-- Only 4 booking details has to dispay per row -->
-                {% if forloop.counter|divisibleby:4 %}
-                </div>
-                <div class="row mt-4 mx-2">
-                {% endif %}
-                {% empty %}
-                <p class="text-center mt-5"> You have no booking Currently !</p>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </div>
-</div>
+</section>
 {% endblock %}
