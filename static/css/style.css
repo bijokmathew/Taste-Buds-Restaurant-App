@@ -1707,3 +1707,8 @@ account-btn {
   background: #ffa012;
   color: #fff;
 }
+.modal-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 600;
+}

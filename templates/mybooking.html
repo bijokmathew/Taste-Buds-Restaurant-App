@@ -32,9 +32,29 @@
                         </p>
                         <div class="mt-auto d-flex justify-content-end ">
                             <a href="/editbooking/{{booking.id}}" class="btn btn-booking-view">Edit</a>
-                            <!-- Button trigger modal -->
-                            <a href="/deletebooking/{{booking.id}}" class="btn btn-booking-view mx-2"
-                                data-bs-toggle="modal" data-bs-target="#deleteModal_{{ booking.id }}">Delete</a>
+                            <!-- Button trigger modal for delete booking-->
+                            <button class="btn btn-booking-view mx-2"
+                                data-bs-toggle="modal" data-bs-target="#deleteModal_{{ booking.id }}">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal delte booling-->
+            <div class="modal fade" id="deleteModal_{{ booking.id }}" tabindex="-1" aria-labelledby="deleteModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel">Would you like to cancel booking ?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4 class="card-title text-center">{{booking.booked_date}} at {{booking.booked_time}}</h4>
+                            <p class="text-center"><span>Guests: </span> {{ booking.number_guest }}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-booking-view" data-bs-dismiss="modal">Close</button>
+                            <a href="{% url 'delete_mybooking' booking.id %}" class="btn btn-booking-view">Delete</a>
                         </div>
                     </div>
                 </div>

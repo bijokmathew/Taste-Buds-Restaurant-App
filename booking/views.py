@@ -70,4 +70,20 @@ def edit_mybooking(request, booking_id):
 
 
 def delete_mybooking(request, booking_id):
-    return
+    """
+    delete_mybooking() help the user to delete his selected booking
+    details.This function fetch the specfic booking record from model 
+    and delete it. After deleting it redirect to mybooking page.
+    This function make sure that the current user can delete only his 
+    booking. 
+    """
+    booking_detail = get_object_or_404(Booking, id=booking_id)
+    print(booking_detail.user)
+    print(request.user)
+    if request.user != booking_detail.user:
+        return redirect("mybooking")
+    booking_detail.delete()
+    return redirect('mybooking')
+
+
+
