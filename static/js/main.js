@@ -80,10 +80,10 @@
    */
   let selectHeader = select('#header')
   let selectTopbar = select('#topbar')
-  let selectSection = select('#page-section')
+  let selectNewPage = select('#mybooking')
   if (selectHeader) {
     const headerScrolled = () => {
-      if (window.scrollY > 100 || selectHeader ) {
+      if (window.scrollY > 100 || selectNewPage) {
         selectHeader.classList.add('header-scrolled')
         if (selectTopbar) {
           selectTopbar.classList.add('topbar-scrolled')
