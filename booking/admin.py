@@ -21,7 +21,7 @@ class BookingAdmin(admin.ModelAdmin):
     list_display = ('name', 'booked_date', 'booked_time', 'number_guest',
                     'booking_status')
     list_filter = ('booked_date', 'booking_status', 'booked_time')
-    search_fields = ('name', 'booked_date', 'booked_time', 'booking_status')
+    search_fields = ('name', 'booked_time', 'number_guest')
     actions = ['accept_booking', 'decline_booking']
 
     def accept_booking(self, request, queryset):
