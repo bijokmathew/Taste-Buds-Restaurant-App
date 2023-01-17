@@ -4,17 +4,23 @@ This restaurant booking application built using Django, and allows customer to r
 
 ![image of lighthouse results for desktop](static/images/)
 ___
-## Table of Contents
-- [Table of Contents](#table-of-contents)
+- ## Table of Contents
+
   - [User Experience (UX)](#user-experience-ux)
+    - [Site Goal](#site-goal)
+    - [Target Audience](#target-audience)
+    - [Owner Goals](#owner-goals)
+    - [Data Required](#data-required)
+    - [Security Features](#security-features)
   - [Design](#design)
   - [Deployment](#deployment)
-  - [Create a Local Clone ](#create-a-local-clone-)
-  - [Forking the GitHub Repository](#forking-the-github-repository)
+  - [Deploying with Heroku](#deploying-with-heroku)
+    - [Create a Local Clone ](#create-a-local-clone-)
+    - [Forking the GitHub Repository](#forking-the-github-repository)
 ___
-### User Experience (UX)
+## User Experience (UX)
 
-**Site Goal**
+  - ### Site Goal
 
 * Overall goal of this website, give nice presentation and customers can easily use the wesite, that generates an interest and curiosity to the customer to visit the restaurant. Customers can see the menu items, shefs details, events and they can contact to the retaurant for further details. Cutomer can easily find the busniness hours and contact number from the webpage. Also they can visit restaurants social media accouts.
 
@@ -22,11 +28,11 @@ ___
      
 * Website administrator can view all reservations and he can accept or decline reservations as per business requirements.
 
-**Target Audience**
+ ### Target Audience
     
 * There is a potentially large target audience for the site, as it may include anyone who wishes to eat at the Taste Buds. However, the venue is well established, chefs are well experienced, events, location and some pictures all are updated in the website. 
 
-**Owner Goals**
+### Owner Goals
 
 * Owner want to run his business efficiently. He should able to view all the customer booking, owner can able to decline the booking request based on the business needs.
 
@@ -40,11 +46,11 @@ ___
   
 * The website UI is designed with the help boostrap theme, account authentication achieved with help django allauth and all forms created with the help of cispy form
 
-**Data Required**
+### Data Required
     
 * As intial paln to develop a MVP product so that very minimum data required is stored on the site, this includes the users name, email, gusts number, booking data and time. These fields are required for user authorization and making reservations. 
 
-**Security Features**
+### Security Features
     
 * User authorization is handled via the django allauth package and a sign-in/sign-out feature. Only the registered site user can make booking and view, amend and cancel thei booking . The singed in status of the user is always highlighted as well.
 
@@ -53,8 +59,10 @@ ___
 
 [Return to Table of Contents](#table-of-contents)
 ___
-### Design
-### Deployment
+## Design
+## Deployment
+
+### Deploying with Heroku
 
 - The site is deployed via [Heroku](https://heroku.com/). The steps to deploy are as follows:
 
@@ -247,7 +255,7 @@ ___
 
     *If GitPod is your chosen IDE from the link above the Gitpod button can be clicked to open up the repository code on your local machine* 
 
-[Return to Table of Contents](#contents)
+[Return to Table of Contents](#table-of-contents)
 ___
 
 ### Forking the GitHub Repository
@@ -260,5 +268,5 @@ ___
 
     * STEP THREE - There will now be a copy of the repository in your own GitHub account.
    
-[Return to Table of Contents](#contents)
+[Return to Table of Contents](#table-of-contents)
 ___
