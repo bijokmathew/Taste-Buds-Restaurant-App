@@ -232,5 +232,25 @@
     </div>
   </div>
 </section><!-- End Menu Section -->
+<!-- ======= Gallery Section ======= -->
+<section id="gallery" class="gallery">
+  <div class="container-fluid">
+    <div class="section-title">
+      <h2>Some photos from <span>Our Restaurant</span></h2>
+    </div>
+    <div class="row g-0">
+      {% for imageUrl in imageUrls %}
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="{{imageUrl.image_url}}" class="gallery-lightbox">
+            <img src="{{imageUrl.image_url}}" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 
 {% endblock %}

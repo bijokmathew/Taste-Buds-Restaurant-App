@@ -1,12 +1,22 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View, generic
+import json
 from .models import Booking
 from .forms import BookingForm
 
 
 class Home(generic.ListView):
-    model = Booking
-    template_name = 'index.html'
+
+    def get(self, request):
+        imageUrl = []
+        model = Booking
+        with open("data/gallery_data.json", "r") as json_data:
+            imageUrls = json.load(json_data)
+        template_name = 'index.html'
+        context = {
+            'imageUrls': imageUrls
+        }
+        return render(request, template_name, context=context)
 
 
 def reserve_table(request): 
