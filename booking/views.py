@@ -8,13 +8,13 @@ from .forms import BookingForm
 class Home(generic.ListView):
 
     def get(self, request):
-        imageUrl = []
+        galleryDatas = []
         model = Booking
         with open("data/gallery_data.json", "r") as json_data:
-            imageUrls = json.load(json_data)
+            galleryDatas = json.load(json_data)
         template_name = 'index.html'
         context = {
-            'imageUrls': imageUrls
+            'galleryDatas': galleryDatas
         }
         return render(request, template_name, context=context)
 

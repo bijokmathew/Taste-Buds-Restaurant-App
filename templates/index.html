@@ -239,11 +239,11 @@
       <h2>Some photos from <span>Our Restaurant</span></h2>
     </div>
     <div class="row g-0">
-      {% for imageUrl in imageUrls %}
+      {% for galleryData in galleryDatas %}
       <div class="col-lg-3 col-md-4">
         <div class="gallery-item">
-          <a href="{{imageUrl.image_url}}" class="gallery-lightbox">
-            <img src="{{imageUrl.image_url}}" alt="" class="img-fluid">
+          <a href="{{galleryData.image_url}}" class="gallery-lightbox">
+            <img src="{{galleryData.image_url}}" alt="" class="img-fluid">
           </a>
         </div>
       </div>
