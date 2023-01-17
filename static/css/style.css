@@ -503,6 +503,7 @@ h6 {
   cursor: pointer;
 }
 
+#login-form button,
 #hero .btn-menu,
 #hero .btn-book {
   font-weight: 600;
@@ -521,6 +522,7 @@ h6 {
   border: 2px solid #ffb03b;
 }
 
+#login-form button:hover,
 #hero .btn-menu:hover,
 #hero .btn-book:hover {
   background: #ffb03b;
@@ -1666,6 +1668,9 @@ account-btn {
   opacity: 1;
 }
 
+#login-form button {
+  background-color: transparent;
+}
 /*--------------------------------------------------------------
 # mybooking page 
 --------------------------------------------------------------*/
