@@ -9,12 +9,17 @@ class Home(generic.ListView):
 
     def get(self, request):
         galleryDatas = []
+        chefsInfo = []
         model = Booking
         with open("data/gallery_data.json", "r") as json_data:
             galleryDatas = json.load(json_data)
         template_name = 'index.html'
+        with open("data/chefs_details.json", "r") as chef_json_data:
+            chefsInfo = json.load(chef_json_data)
+        template_name = 'index.html'
         context = {
-            'galleryDatas': galleryDatas
+            'galleryDatas': galleryDatas,
+            'chefsInfo': chefsInfo
         }
         return render(request, template_name, context=context)
 
