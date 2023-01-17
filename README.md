@@ -13,6 +13,15 @@ ___
     - [Data Required](#data-required)
     - [Security Features](#security-features)
   - [Design](#design)
+  - [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Frameworks & Toolkits](#frameworks--toolkits)
+    - [Database](#database)
+    - [Cloud Services](#cloud-services)
+    - [Server](#server)
+    - [Version Control](#version-control)
+    - [Libraries, Packages and Applications](#libraries-packages-and-applications)
+    - [Programs](#programs)
   - [Deployment](#deployment)
   - [Deploying with Heroku](#deploying-with-heroku)
     - [Create a Local Clone ](#create-a-local-clone-)
@@ -60,6 +69,88 @@ ___
 [Return to Table of Contents](#table-of-contents)
 ___
 ## Design
+___
+## Technologies Used
+
+- ### Languages Used
+
+    * HTML
+    * CSS
+    * JAVASCRIPT
+    * PYTHON
+    * MARKDOWN
+
+- ### Frameworks & Toolkits
+
+    * **[Django 3.2](https://www.djangoproject.com/download/).**
+        * Python based web framework, used to build the application.
+    
+    * **[Bootstrap 5.2](https://getbootstrap.com/).**
+        * Bootstrap restaurant app themes used in this project.
+    
+    * **[Font Awesome](https://fontawesome.com/).**
+        * Icon set and toolkit used across the application.
+
+- ### Database
+    
+    * **[PostgreSQL](https://www.postgresql.org/).**
+        * The relational database management system used.
+
+- ### Cloud Services
+
+    * **[Heroku](https://id.heroku.com/login).**
+        * Used to deploy project.
+
+    * **[Cloudinary](https://cloudinary.com/).**
+        * A cloud-based image and video management service. Used due to Heroku using an ephemeral file system. 
+
+- ### Server
+
+    * **[Gunicorn](https://gunicorn.org/).**
+        * The server used to run Django on Heroku.
+
+- ### Version Control
+    
+    * **Git.**
+        * Git was used for version control by utilizing the GitPod terminal to commit to Git and Push to GitHub.
+
+    * **[GitHub](https://github.com/).**
+        * GitHub is used to store the projects code.
+    
+    * **[Gitpod](https://www.gitpod.io/docs/).**
+        * The IDE used to build the project.
+
+- ### Libraries, Packages and Applications
+
+    * **[dj_database_url](https://pypi.org/project/dj-database-url/).**
+        * A PostgreSQL supporting library. Allows you to utilize the 12factor inspired DATABASE_URL environment variable to configure your Django application.
+    
+    * **[pyscopg2](https://www.psycopg.org/docs/).**
+        * PostgreSQL database adapter for the Python programming language.
+    
+    * **[dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/).**
+        * a Django package that facilitates integration with Cloudinary.
+    
+    * **[allauth](https://django-allauth.readthedocs.io/en/latest/installation.html).**
+        * Used for creation and maintenance of user accounts.
+    
+    * **[crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/index.html).**
+        * Used for rendering the booking form from the model.
+    
+    * **[coverage](https://coverage.readthedocs.io/en/6.3/).**
+        * Used to access the coverage of automated tests for the python code i've wrote.
+        
+- ### Programs
+
+    * **Slack.**
+        * Specifically the peer-code_review channel on Code Institutes Slack workspace. Used to increase the scope of my testing.
+    
+    * **Balsamiq.** 
+        * Used to create the wire frames during the development process.
+       
+[Return to Table of Contents](#table-of-contents)
+___
+
 ## Deployment
 
 ### Deploying with Heroku
