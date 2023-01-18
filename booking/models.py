@@ -75,6 +75,13 @@ class Booking(models.Model):
     class Meta:
         ordering = ['-booked_date']
 
+        # To ensures same user can only be booked once for each date.
+        # Avoid double booking
+        constraints = [
+            UniqueConstraint(
+                fields=['booked_date', 'booked_time'], name='unique_booking'),
+        ]
+
     def __str__(self):
         return f"Booked the table on {self.booked_date} {self.booked_time}\
                 by {self.name}"

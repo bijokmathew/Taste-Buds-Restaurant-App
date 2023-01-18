@@ -81,6 +81,7 @@
   let selectHeader = select('#header')
   let selectTopbar = select('#topbar')
   let selectNewPage = select('#mybooking')
+  console.log(selectNewPage)
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100 || selectNewPage) {
