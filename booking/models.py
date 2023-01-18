@@ -40,7 +40,7 @@ TIME = (
 # tuple is used to store the number of guest and and this is used to display 
 # as dropdown list in the booking form
 
-GUEST = {
+GUEST = (
     (1, '1'),
     (2, '2'),
     (3, '3'),
@@ -48,7 +48,7 @@ GUEST = {
     (5, '5'),
     (6, '6'),
     (7, '7'),
-}
+)
 
 
 class Booking(models.Model):
