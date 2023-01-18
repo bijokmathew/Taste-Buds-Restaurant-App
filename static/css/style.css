@@ -1105,98 +1105,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Book A Table
---------------------------------------------------------------*/
-.book-a-table .php-email-form {
-  width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-  padding: 30px;
-  background: #fff;
-}
-
-.book-a-table .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.book-a-table .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.book-a-table .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.book-a-table .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.book-a-table .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.book-a-table .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.book-a-table .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.book-a-table .php-email-form input,
-.book-a-table .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.book-a-table .php-email-form input {
-  height: 44px;
-}
-
-.book-a-table .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.book-a-table .php-email-form button[type=submit] {
-  background: #ffb03b;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.book-a-table .php-email-form button[type=submit]:hover {
-  background: #ffa012;
-}
-
-/*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
 .gallery {
@@ -1671,6 +1579,17 @@ account-btn {
 #login-form button {
   background-color: transparent;
 }
+
+/*--------------------------------------------------------------
+# Book A Table
+--------------------------------------------------------------*/
+.double-booking {
+  text-transform: capitalize;
+  font-style: normal;
+  font-family: 'Times New Roman', Times, serif;
+  color: red;
+  margin: 20px 20px;
+}
 /*--------------------------------------------------------------
 # mybooking page 
 --------------------------------------------------------------*/
@@ -1684,15 +1603,16 @@ account-btn {
   margin-top: 10px;
 }
 
-.card-body h5{
+.card-body h5 {
   font-weight: 700;
   font-size: 16px;
-  font-family:sans-serif;
+  font-family: sans-serif;
 }
-.card-body h6{
+
+.card-body h6 {
   font-weight: 600;
   font-size: 16px;
-  font-family:sans-serif;
+  font-family: sans-serif;
 }
 
 .btn-booking-view {
@@ -1712,6 +1632,7 @@ account-btn {
   background: #ffa012;
   color: #fff;
 }
+
 .modal-title {
   font-family: 'Times New Roman', Times, serif;
   font-style: normal;

@@ -24,13 +24,16 @@ class Home(generic.ListView):
         return render(request, template_name, context=context)
 
 
-def reserve_table(request): 
+def reserve_table(request):
     """
     * reserve_table method is used for booking the table
     * If user select the booking table option then it goes to
       booking form and user can update the required info.
-    * If user select submit on booking form then it saves the 
-      data to the booking model and redirect to bookinglist 
+    * If user select submit on booking form then it saves the
+      data to the booking model and redirect to bookinglist
+    * If user has already made booking on same date and same time
+      then it should not save to booking model and shows a proper
+      message to the user
     """
     if request.method == 'GET':
         context = {
@@ -40,12 +43,22 @@ def reserve_table(request):
     elif request.method == 'POST':
         form = BookingForm(data=request.POST)
         if form.is_valid():
-            # To avoid Null constraint violation when saving object w
-            # ith Foreign Key relationships
+            # To avoid Null constraint violation when saving object
+            # with Foreign Key relationships
             booking_form = form.save(commit=False)
             booking_form.user = request.user
             booking_form.save()
             return redirect('mybooking')
+        else:
+            error = (
+                'Invalid, incorrect info or double booking !!!'
+            )
+            context = {
+                'error': error,
+                'booking_from': BookingForm()
+            }
+            return render(
+                request, 'booking.html', context=context)
 
 
 class MyBooking(generic.ListView):
@@ -68,7 +81,7 @@ def edit_mybooking(request, booking_id):
     which is used to fetch the booking details from the booking
     model.And pass these details in to the django form(BookingForm)
     which helps to populate the required model fileds with corresponding
-    data in to the edit booking template 
+    data in to the edit booking template
     """
     booking_details = get_object_or_404(Booking, id=booking_id)
     if request.method == 'GET':
@@ -87,10 +100,10 @@ def edit_mybooking(request, booking_id):
 def delete_mybooking(request, booking_id):
     """
     delete_mybooking() help the user to delete his selected booking
-    details.This function fetch the specfic booking record from model 
+    details.This function fetch the specfic booking record from model
     and delete it. After deleting it redirect to mybooking page.
-    This function make sure that the current user can delete only his 
-    booking. 
+    This function make sure that the current user can delete only his
+    booking.
     """
     booking_detail = get_object_or_404(Booking, id=booking_id)
     print(booking_detail.user)
@@ -99,6 +112,3 @@ def delete_mybooking(request, booking_id):
         return redirect("mybooking")
     booking_detail.delete()
     return redirect('mybooking')
-
-
-

@@ -78,7 +78,7 @@ class Booking(models.Model):
         # To ensures same user can only be booked once for each date.
         # Avoid double booking
         constraints = [
-            UniqueConstraint(
+            models.UniqueConstraint(
                 fields=['booked_date', 'booked_time'], name='unique_booking'),
         ]
 
