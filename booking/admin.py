@@ -18,9 +18,9 @@ class BookingAdmin(admin.ModelAdmin):
     * Defined accept_booking and decline_booking for confirming or rejectiong
       the booking
     """
-    list_display = ('name', 'booked_date', 'booked_time', 'number_guest',
-                    'booking_status')
-    list_filter = ('booked_date', 'booking_status', 'booked_time')
+    list_display = ('user', 'name', 'booked_date', 'booked_time',
+                    'number_guest', 'booking_status')
+    list_filter = ('booked_date', 'booking_status', 'booked_time', 'user')
     search_fields = ('name', 'booked_time', 'number_guest')
     actions = ['accept_booking', 'decline_booking']
 

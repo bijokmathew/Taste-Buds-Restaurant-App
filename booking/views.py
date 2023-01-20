@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
-from django.views import View, generic
-import json
-from .models import Booking
-from .forms import BookingForm
 from django.core.exceptions import ValidationError
+from django.views import View, generic
+from .forms import BookingForm
+from .models import Booking
+import datetime
+import json
 
 
 class Home(generic.ListView):
@@ -67,17 +68,43 @@ class MyBooking(generic.ListView):
     Allow the customer to edit or cancel his booking.Also it check
     the booking date so that this will display.This function derived
     from generic ListView and use Booking model for fetching the booking
-    details
+    details.By using filter and check_valid_datetime functions, filter valid
+    booked date and booked time records from the booking model
 
     """
     model = Booking
     template_name = 'mybooking.html'
+    now = datetime.datetime.now()
+    print(now)
+    print(now.strftime("%H:%M"))
 
+    def check_valid_datetime(self, mybooking):
+        """
+        check_valid_datetime function used to check the booked_time and booked
+        date in my booking list is a valid by comparing the booked date and
+        booked time with today date and time. if booked date and booked_time is
+        same or future date and time then the function return true, else
+        return false.
+
+        """
+        current_date = datetime.date.today()
+        current_date_time = datetime.datetime.today()
+        current_time = current_date_time.strftime("%H:%M")
+        print("current_time to string ---", current_time)
+        if mybooking.booked_date == current_date and \
+           mybooking.booked_time >= current_time:
+            return True
+        elif mybooking.booked_date > current_date:
+            return True
+        else:
+            return False
+    
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
             booking_list = Booking.objects.filter(user=request.user)
+            valid_booking = filter(self.check_valid_datetime, booking_list)
             context = {
-                'bookings': booking_list
+                'bookings': valid_booking
             }
             return render(request, "mybooking.html", context=context)
         else:
