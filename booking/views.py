@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import View, generic
 import json
 from .models import Booking
@@ -62,6 +62,14 @@ def reserve_table(request):
 
 
 class MyBooking(generic.ListView):
+    """
+    Mybooking function display all booking of the autherized user.
+    Allow the customer to edit or cancel his booking.Also it check
+    the booking date so that this will display.This function derived
+    from generic ListView and use Booking model for fetching the booking
+    details
+
+    """
     model = Booking
     template_name = 'mybooking.html'
 
@@ -72,6 +80,8 @@ class MyBooking(generic.ListView):
                 'bookings': booking_list
             }
             return render(request, "mybooking.html", context=context)
+        else:
+            return redirect(reverse('account_login'))
 
 
 def edit_mybooking(request, booking_id):
