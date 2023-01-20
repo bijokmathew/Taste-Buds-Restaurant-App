@@ -3,6 +3,7 @@ from django.views import View, generic
 import json
 from .models import Booking
 from .forms import BookingForm
+from django.core.exceptions import ValidationError
 
 
 class Home(generic.ListView):
@@ -50,15 +51,14 @@ def reserve_table(request):
             booking_form.save()
             return redirect('mybooking')
         else:
-            error = (
-                'Invalid, incorrect info or double booking !!!'
-            )
+            errors = form.errors
             context = {
-                'error': error,
+                'form': form,
                 'booking_from': BookingForm()
             }
             return render(
-                request, 'booking.html', context=context)
+                request, 'booking.html', context=context
+            )
 
 
 class MyBooking(generic.ListView):

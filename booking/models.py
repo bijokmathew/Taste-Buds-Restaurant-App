@@ -85,3 +85,5 @@ class Booking(models.Model):
     def __str__(self):
         return f"Booked the table on {self.booked_date} {self.booked_time}\
                 by {self.name}"
+    
+    

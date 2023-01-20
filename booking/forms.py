@@ -2,6 +2,8 @@ from .models import Booking
 from django import forms
 from .widget import DateInput
 from .models import TIME, GUEST
+from . import validator
+from django.core.exceptions import NON_FIELD_ERRORS
 
 
 class BookingForm(forms.ModelForm):
@@ -32,6 +34,9 @@ class BookingForm(forms.ModelForm):
     booked_date = forms.DateField(
         label='Date of Booking',
         required=True,
+        validators=[validator.validate_future_date],
+        error_messages={'invalid': 'Date is not valid. Please select a\
+        future date !!!'},
         widget=DateInput()
     )
 
@@ -46,6 +51,11 @@ class BookingForm(forms.ModelForm):
         fields = '__all__'
 
         exclude = ('user', 'booking_status')
+        error_messages = {
+            NON_FIELD_ERRORS: {
+                'unique_together': 'Invalid, incorrect info or double booking',
+            }
+        }
         widgets = {
                     'booked_date': DateInput()
         }

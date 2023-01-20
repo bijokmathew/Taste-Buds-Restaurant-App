@@ -1,5 +1,6 @@
 from django import forms
 
+
 class DateInput(forms.DateInput):
     """
     This class overrides forms's DateInput class
