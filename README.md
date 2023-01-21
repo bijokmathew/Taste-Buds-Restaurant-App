@@ -13,6 +13,8 @@ ___
     - [Data Required](#data-required)
     - [Security Features](#security-features)
   - [Design](#design)
+  - [Wireframes](#wireframes)
+  - [Database Schema](#database-schema)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks & Toolkits](#frameworks--toolkits)
@@ -29,7 +31,7 @@ ___
 ___
 ## User Experience (UX)
 
-  - ### Site Goal
+### Site Goal
 
 * Overall goal of this website, give nice presentation and customers can easily use the wesite, that generates an interest and curiosity to the customer to visit the restaurant. Customers can see the menu items, shefs details, events and they can contact to the retaurant for further details. Cutomer can easily find the busniness hours and contact number from the webpage. Also they can visit restaurants social media accouts.
 
@@ -68,7 +70,32 @@ ___
 
 [Return to Table of Contents](#table-of-contents)
 ___
+
 ## Design
+
+* The theme for the project were chosen in accordance with the intended target market in mind for the restaurant. With its fancy 
+  looks and feel, dark colors and luxurious details and effects, the theme fits perfect for the goal of giving the visitor the impression that this is a very high quality restaurant.
+
+* Colors  
+  
+  The main colors are overall dark shade of grey, white and Sea Buckthorn to provide an elegant look and feel. Furthermore, elements such as buttons, icons, symbols, links and headings are made in gold color that follows the pattern of elegance and adds to the premier look and feel of the webpage.
+
+* Font
+  The fonts in the theme are clear and modern and contribute perfectly to the overall elegant setting.
+
+* Images  
+  The images in the theme provide great content and presentation of the restaurant and serves as an enticement for the visitors.  
+
+## Wireframes  
+* A separate document for the wireframes can be viewed here: 
+    - [For Desktop view](docs/)
+    - [For Mobile view](docs/)    
+
+## Database Schema  
+  The database design schema can be viewed below. It consists of a Booking model with a foreignKey of User that relates to the Django standard User model class.  
+    ![dbschema](docs/img/)  
+
+[Return to Table of Contents](#table-of-contents)
 ___
 ## Technologies Used
 
