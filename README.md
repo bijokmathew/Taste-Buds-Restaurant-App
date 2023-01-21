@@ -13,8 +13,23 @@ ___
     - [Data Required](#data-required)
     - [Security Features](#security-features)
   - [Design](#design)
-  - [Wireframes](#wireframes)
-  - [Database Schema](#database-schema)
+    - [Wireframes](#wireframes)
+    - [Database Schema](#database-schema)
+  - [Development](#deployment)
+  - [Existing Features](#existing-features)
+    - [Landing Page](#landing-page)
+    - [TopBar](#topbar)
+    - [Navigation](#navigation)
+    - [Footer](#footer)
+    - [User Creation](#user-creation)
+    - [User SignIn/SignOut](#user-signinsignout)
+    - [About](#about)
+    - [Menu](#menu)
+    - [chef](#chefs)
+    - [Gallery](#gallery)
+    - [Book a Table](#book-a-table)
+    - [My Booking](#my-booking)
+    - [Delete Booking](#delete-booking)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks & Toolkits](#frameworks--toolkits)
@@ -120,7 +135,100 @@ ___
     * The Third Cycle milestone can be found [here](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/milestone/3?closed=1)
     ![image of the iteration 3 board](static/images/)
 
-[Return to Table of Contents](#contents)
+[Return to Table of Contents](#table-of-contents)
+___
+
+## Existing Features
+
+   ### Landing Page
+
+  * The landing page features a hero image with a brief description of the restaurant, it's facilities and accessibility level. The landing page is fully responsive built using bootstrap. Landing page is designed with carousel feature and uses three images.
+    
+    ![landing page image](static/images/)
+
+   ### TopBar
+    
+   * TopBar is fully responsive and designed with black color and transparent bacgroud property.Restaurent business details like opening hours and contact number are displayed on topbar.While scrolling or moving to different page then the top bar will disappear and push the navigation bar in the place of topbar   
+        
+     ![topbar image](static/images)
+
+   ### Navigation
+   
+   * The navigation bar is fully responsive and responds to the authorization status of the user. If a user is not signed then navbar shows signUp and signIn options and hide signOut and MyBooking option from the navbar.If user is try to book a table without signIn then it shown message to the user that user need to signIn?signUp first.The MyBooking and logout tab are only visible to authorized users.The restaurant name is always displayed to the left hand side for all screen. The navbar is present across all pages of the website, as it provides main source of navigation between content. 
+
+     ![image of the navigation bar with authorized user](static/images/)
+     ![image of the navigation bar with non authorized user](static/images/)
+
+   ### Footer
+    
+   * The footer contains address of the restaurant and social media links to get the updates about the restaurent from social apps. Built to be fully responsive
+        
+     * [Business Details of Restaurant](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/5)
+     ___ 
+     ![footer image](static/images/)
+
+   ### User Creation
+
+   * User creation uses the django-allauth package to collect the necessary information needed by the company for account creation.
+        
+     * [Account Registration](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/1)
+     ___
+     ![image of the user sign up form](static/images/)
+
+   ### User SignIn/SignOut
+   * User can SignIn and SignOut by using the SignIn and SignOut page.
+  
+     ![image of the user sign in form](static/images/)
+     ![image of the user sign out page](static/images/)
+
+   ### About
+   * About section built in fully responsive and contain details about the restaurant like seating capacity, special food etc.
+     Also contain video link about the restaurant.
+      
+     ![image of the about section](static/img/)
+
+   ### Menu
+   * The menu section present all available menu items in restaurant with image description. Also group the food items on category based like starter, salads etc and category tab is displayed on the top of the menu so that user can easly navigate.
+       
+     * [view all restaurant menu items](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/8)
+     ___
+     ![image of the menu section](static/img/)
+   ### Chefs
+   * The chef section built in full responsive and present main chefs details like name, role and social links
+     ![image of the chefs section](static/img/)
+
+   ### Gallery
+   *  Gallery section built in full responsive and display some images of restaurant.
+     ![image of the gallery section](static/img/)
+
+   ### Book a Table
+   * Booking table option takes the user to booking form to collects all the information needed for the venue to make a reservation request.User not allowed to book a table for previous dates and this is achived by adding the validation check on date and time fields.Double bookings are prevented via a unique constraint on the user, date and time fields from within the model and any validation error send back and displayed in the booking form field.
+        
+     * Date - Validation to ensure it's a future date 
+     * Time - Validation to ensure the requested time future time.
+     * Amend Reservation - Ensures the user attempting to alter the reservation is the owner.
+     ___
+     * [Book a table](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/2)
+     * [Double Bookings](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/7)
+    
+     ---
+     ![image of the booking form](static/images/)
+
+   ### My booking
+   * My booking display all the future booking details of the user.It wont display the past booking details and it is achieved by filter the booking data from the model with current data and time.Also My booking given option for modifying or canceling the current booking. Modifying the existing booking will follow the same process of book a table.
+     * [Manage My Booking](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/4)
+     * [View all table Bookings](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/3)
+     * [Edit My booking details](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/6)
+     ---
+     ![image of the my booking ](static/images/)
+     ![image of the edit booking ](static/images/)
+
+   ### Delete booking
+   * When user select on the "delete" button in booking details of the mybookings page, a warning message is shown to prevent Customers from deleting their bookings by mistake. 
+
+     ![image of the delete booking](static/img/)
+
+[Return to Table of Contents](#table-of-contents)
 ___
 
 ## Technologies Used
