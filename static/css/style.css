@@ -137,6 +137,32 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Message Bar
+--------------------------------------------------------------*/
+
+#message-bar{
+  margin-top: 100px;
+  padding: 0 10px;
+}
+
+#message-bar .message-alert {
+  background: transparent;
+  z-index: 997;
+  transition: all 0.5s;
+  border: 1px solid #cda45e;
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(212, 126, 13);
+  text-align: center;
+  opacity: 0.9;
+}
+
+#message-bar.message-scrolled{
+  margin-top: 80px;
+  padding: 0 10px;
+}
+/*--------------------------------------------------------------
 # Book a table button Menu
 --------------------------------------------------------------*/
 .book-a-table-btn {

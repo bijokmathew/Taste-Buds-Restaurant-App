@@ -81,6 +81,7 @@
   let selectHeader = select('#header')
   let selectTopbar = select('#topbar')
   let selectNewPage = select('#mybooking')
+  let selectMessageBar = select('#message-bar')
   console.log(selectNewPage)
   if (selectHeader) {
     const headerScrolled = () => {
@@ -89,11 +90,16 @@
         if (selectTopbar) {
           selectTopbar.classList.add('topbar-scrolled')
         }
+        selectMessageBar.classList.add('message-scrolled')
+
       } else {
         selectHeader.classList.remove('header-scrolled')
         if (selectTopbar) {
           selectTopbar.classList.remove('topbar-scrolled')
         }
+       
+        selectMessageBar.classList.remove('message-scrolled')
+        
       }
     }
     window.addEventListener('load', headerScrolled)
