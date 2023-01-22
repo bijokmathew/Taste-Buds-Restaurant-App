@@ -8,6 +8,7 @@ ___
 
   - [User Experience (UX)](#user-experience-ux)
     - [Site Goal](#site-goal)
+    - [User stories](#user-stories)
     - [Target Audience](#target-audience)
     - [Owner Goals](#owner-goals)
     - [Data Required](#data-required)
@@ -48,7 +49,6 @@ ___
     - [Forking the GitHub Repository](#forking-the-github-repository)
 ___
 ## User Experience (UX)
-
 ### Site Goal
 
 * Overall goal of this website, give nice presentation and customers can easily use the wesite, that generates an interest and curiosity to the customer to visit the restaurant. Customers can see the menu items, shefs details, events and they can contact to the retaurant for further details. Cutomer can easily find the busniness hours and contact number from the webpage. Also they can visit restaurants social media accouts.
@@ -56,6 +56,20 @@ ___
 * This website gives options to Customer to create an account and they can sign-in to thier account for booking the table. Also cutomer can view all his booking and they can update/ delete booking in future.
      
 * Website administrator can view all reservations and he can accept or decline reservations as per business requirements.
+
+### User stories
+
+  #### First Time Visitor Goals
+   * As a first time visitor I can find business hours , contact details, address.
+   * As a first time visitor I can find out what kind of food they serve from their menu.
+   * As a first time visitor I can find information about how to make a reservation at the restaurant.
+   * As a first time visitor I can send a message to the restaurant for any specific information
+        
+  #### Frequent Visitor Goals
+   * As a frequent visitor I can create an account so that I can make a reservation online.
+   * As a frequent visitor I can view the menu before booking the table.
+   * As a frequent visitor I can login and find my current bookings.
+   * As a frequent visitor I can change or cancel my prevoius booking
 
  ### Target Audience
     
@@ -335,7 +349,6 @@ ___
 | Admin panel search for booking | Go to Admin page and check search funtion is working | Admin can search in the booking list based name, booked time, number of guest | PASS |
 | Admin panel filter for booking | Go to Admin page and check filter options are working | Admin can filter the booking list based booked-status, booked time, user | PASS |
 | Admin panel accept/decline booking | Go to Admin page and check accept/decline options are working | Admin can accept/decine the booking and booking status should updated accordingly | PASS |
-
 
 ---
 
