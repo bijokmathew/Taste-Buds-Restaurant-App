@@ -85,3 +85,20 @@ class Booking(models.Model):
     def __str__(self):
         return f"Booked the table on {self.booked_date} {self.booked_time}\
                 by {self.name}"
+
+
+class Contact(models.Model):
+    """
+    """
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    subject = models.CharField(max_length=100, blank=False)
+    message = models.TextField(max_length=300, blank=False)
+
+    class Meta:
+        ordering = ['name']
+
+    def __str__(self):
+        """
+        """
+        return f"{self.name} sent a message {self.subject}"

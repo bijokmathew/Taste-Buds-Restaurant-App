@@ -19,7 +19,7 @@
         {% endif %}
         <form method="post">
           {% csrf_token %}
-          {{ booking_from.as_p }}
+          {{ booking_form.as_p }}
           <button class="account-btn" type="submit">Send Message</button>
         </form>
 

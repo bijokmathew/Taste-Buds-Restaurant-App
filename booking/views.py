@@ -39,7 +39,7 @@ def reserve_table(request):
     """
     if request.method == 'GET':
         context = {
-            'booking_from': BookingForm()
+            'booking_form': BookingForm()
         }
         return render(request, 'booking.html', context=context)
     elif request.method == 'POST':
@@ -98,7 +98,7 @@ class MyBooking(generic.ListView):
             return True
         else:
             return False
-    
+
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
             booking_list = Booking.objects.filter(user=request.user)

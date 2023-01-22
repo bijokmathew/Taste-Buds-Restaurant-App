@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Booking
+from .models import Booking, Contact
 
 # Registering Book model in to admin panel
 
@@ -37,3 +37,12 @@ class BookingAdmin(admin.ModelAdmin):
         in to 2
         """
         queryset.update(booking_status=2)
+
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    """
+    """
+    list_display = ('name', 'subject', 'message', 'email')
+    list_filter = ('subject', 'name')
+    search_fields = ('name', 'subject')
