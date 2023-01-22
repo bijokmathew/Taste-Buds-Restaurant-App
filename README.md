@@ -34,6 +34,8 @@ ___
   -[Future Features](#future-features) 
   -[Testing](#testing)
     -[User Stories](#user-stories)
+    -[Fixed issues](#fixed-issues)
+    -[Remaing issues](#remaining-issues)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks & Toolkits](#frameworks--toolkits)
@@ -330,12 +332,12 @@ ___
 | previos dates Bookings on mybookings page | Check previous dated booking listed on the mybooking page  | Mybooking page should not display the previous dated bookings | PASS |
 | Bookings can be edited | Check that the edit button works and that the updated booking is submitted to the mybooking page when edited | Booking is updated with the corresponding booking details | PASS |
 | Bookings can can be deleted | Check that the delete button works and that the deleted booking is removed from the mybooking page when deleted | Mybooking list is updated | PASS |
-
+&nbsp;
 #### Navbar
 | Description  | Steps | Expected Outcome | Results |  
 | - | - | - | - |
 | Navbar | Check that each link is working correctly | Customer is able to open each link to browse the webpage for information about the restaurant | PASS |
-
+&nbsp;
 #### Admin
 | Description  | Steps | Expected Outcome | Results |  
 | - | - | - | - |
@@ -349,7 +351,22 @@ ___
 | Admin panel search for booking | Go to Admin page and check search funtion is working | Admin can search in the booking list based name, booked time, number of guest | PASS |
 | Admin panel filter for booking | Go to Admin page and check filter options are working | Admin can filter the booking list based booked-status, booked time, user | PASS |
 | Admin panel accept/decline booking | Go to Admin page and check accept/decline options are working | Admin can accept/decine the booking and booking status should updated accordingly | PASS |
+&nbsp;
+### Fixed Issues
 
+
+|Issues Details | Solution | Status |
+|----|:---------|:-------|
+|navigation links are not working from new page like signIn, signOut, signUp, mybooking pages| updated the urls like home urls+navigation list id  | Fixed |
+|My booking layout for cards to display the booking details are not same height| By using flex display and align-item-stretch property  | Fixed |
+|Past booking details displaying on my booking page | Filter the booking data from db based on current date and time | Fixed |
+|A user can delete another user's bookings| Add authorization check to the delete_booking function | Fixed |
+|A user can update another user's bookings| Add authorization check to the edit_booking function | Fixed |
+|A user can show another user's bookings| Add authorization check to the mybookings_page function | Fixed |
+
+
+### Remaining Issues
+  - No known ssues
 ---
 
 ## Technologies Used
