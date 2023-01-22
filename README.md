@@ -34,6 +34,7 @@ ___
   -[Future Features](#future-features) 
   -[Testing](#testing)
     -[User Stories](#user-stories)
+    -[Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience-ux-section)
     -[Fixed issues](#fixed-issues)
     -[Remaing issues](#remaining-issues)
   - [Technologies Used](#technologies-used)
@@ -352,6 +353,29 @@ ___
 | Admin panel filter for booking | Go to Admin page and check filter options are working | Admin can filter the booking list based booked-status, booked time, user | PASS |
 | Admin panel accept/decline booking | Go to Admin page and check accept/decline options are working | Admin can accept/decine the booking and booking status should updated accordingly | PASS |
 &nbsp;
+### Testing User Stories from User Experience (UX) Section
+  #### First Time Visitor Goals
+   * As a first time visitor I can find business hours , contact details, address.
+      * User can find the business hours, cotact details on topbar and address on the footer  
+   * As a first time visitor I can find out what kind of food they serve from their menu.
+      * User can go to food menu from the navbar as well as from the hearo section.In menu page food catogeries also listed
+   * As a first time visitor I can find information about how to make a reservation at the restaurant.
+      * User can find Book a Table option on navbar and hero section.If user not signIn then ask to SignIn or SignUp for booking 
+   * As a first time visitor I can send a message to the restaurant for any specific information
+      * User can go to contact form from navigation link and user can enter the details and message to send to restaurant 
+        
+  #### Frequent Visitor Goals
+   * As a frequent visitor I can create an account so that I can make a reservation online.
+      * User can create account by using SignUp link from the navbar  
+   * As a frequent visitor I can view the menu before booking the table.
+      * User can go to food menu from the navbar as well as from the hearo section.In menu page food catogeries also listed 
+   * As a frequent visitor I can login and find my current bookings.
+      * User can login by using SignIn link from navbar and can view booking by using mybooking link in navbar 
+   * As a frequent visitor I can change or cancel my prevoius booking
+      * User can find option delete/edit on indivijual booking deatils
+
+
+&nbsp;
 ### Fixed Issues
 
 
@@ -367,6 +391,8 @@ ___
 
 ### Remaining Issues
   - No known ssues
+
+[Return to Table of Contents](#table-of-contents)
 ---
 
 ## Technologies Used
