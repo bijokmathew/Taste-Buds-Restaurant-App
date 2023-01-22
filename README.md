@@ -30,6 +30,7 @@ ___
     - [Book a Table](#book-a-table)
     - [My Booking](#my-booking)
     - [Delete Booking](#delete-booking)
+  -[Future Features](#future-features) 
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks & Toolkits](#frameworks--toolkits)
@@ -227,6 +228,38 @@ ___
    * When user select on the "delete" button in booking details of the mybookings page, a warning message is shown to prevent Customers from deleting their bookings by mistake. 
 
      ![image of the delete booking](static/img/)
+
+[Return to Table of Contents](#table-of-contents)
+___
+## Future Features
+
+  * The product backlog can be viewed [here](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/milestone/4).
+
+   ### Admin can manage Menu Items
+
+   * Admin should have control to add, delete or modify the menu items by using admin panel. Currently the menu items are hard coded in the application.In furure we have to create a Model for managing the menu items. I already created an issue and added to the backlog
+     [Admin can manage Menu](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/14)
+
+   ### Admin can manage the seating capacity
+
+   * Admin should able to add, modify or delete the table capacity by using admin panel. Currently there is no such option in the application. In future , create a model for managing the table capacity and linked to the existing Booking model. I already created an issue and added to the backlog
+     [Admin able to manage the seating capacity](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/13)
+
+   ### Automated Emails
+
+   * User receives automated emails whenever their booking is accepted.I already created an issue and added to the backlog.
+     [Email notification regarding the booking status](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/11)
+
+   ### Remember Me 
+
+   * User able to set remember me option while login so that he no need to eneter the credential again by visiting the page in the same device. Currently this feature is disabled. In futute we need to implement by using django-allauth.I already created an issue and added to the backlog
+     [Remember Me functionality in Login Page](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/9)
+
+   ### Password Reset
+
+   * Build a feature which gives users the ability to reset the password on their account.I already created an issue and added to the backlog
+  
+     [Password Reset](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/10)
 
 [Return to Table of Contents](#table-of-contents)
 ___
