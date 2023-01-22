@@ -31,6 +31,8 @@ ___
     - [My Booking](#my-booking)
     - [Delete Booking](#delete-booking)
   -[Future Features](#future-features) 
+  -[Testing](#testing)
+    -[User Stories](#user-stories)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks & Toolkits](#frameworks--toolkits)
@@ -263,6 +265,79 @@ ___
 
 [Return to Table of Contents](#table-of-contents)
 ___
+
+## Testing
+* Testing done throughout the process while developing the project by the use of Django debug pages and printing statements to check that the code functioned accordingly. In addition, thorough testing has been performed and is described below, it contains of manual test to check that all user stories and acceptance criteria are met, as well as testing and validating the code with different online tools as presented below.
+
+
+### Test Cases 
+### User Stories
+&nbsp;
+#### Menu page
+
+| Description  | Steps | Expected Outcome | Results |  
+| - | - | - | - |
+| Customer can view menu page | Test menu link and child links within the menu page | Being able to open and browse the menu without errors | PASS |
+| Customer can view menu categories | Test menu categories on the menu page | Being able to open and browse the menu categories without errors | PASS |
+&nbsp;
+#### Home page
+
+| Description  | Steps | Expected Outcome | Results |  
+| - | - | - | - |
+| Customer can view home page | Open the webpage link in the browser | Being able to lanuch the homepage and user has to scroll the homepage without any issues   | PASS |
+| Customer can view restaurant details like contact, opening hours and address etc | Open the webpage link in the browser and check the topbar, footer, gallery, about, etc | User able to find the address, contact, opening hours in the homepage.Also he can browse and read other items on the homepage without any issues | PASS |
+&nbsp;
+#### Registration 
+
+| Description  | Steps | Expected Outcome | Results |  
+| - | - | - | - |
+| Customer signup page | Select SignUp link from navbar| Customer should directed to the signup page | PASS |
+| Customer signup - Empty Form validation | Submit empty form | Form validation error should display to the user | PASS |
+| Customer signup - Email Field validation | Submit invalid email address | Email filed validation error should display to the user | PASS |
+| Customer signup - password field validation | Submit invalid password | Passwoed field validation error should display to the user | PASS |
+| Customer signup - password  mismatch validation | Submit non matching passwords | password mismatch validation error should display to the user | PASS |
+| Customer signup - Existing user validation | Submit already existing username | username already exists validation error should display to the user | PASS |
+| Customer SignIn page | Select SignIn link from navbar | Customer should directed to the login page | PASS |
+| Customer SignIn - Empty Form validation | Submit empty form | Empty Form validation error should display to the user | PASS |
+| Customer SignIn - Incorrect password validation | Submit incorrect password | Password field validation error should display to the user | PASS |
+| Customer SignIn - Incorrect name validation | Submit incorrect name | Name field validation error should display to the user | PASS |
+| Customer SignOut page | Select SignOut link from navbar | User should ask confirmation about logged out | PASS |
+| Customer SignOut confirmation alert | Select SignOut from the confirmation | User should logged out and go to homepage | PASS |
+&nbsp;
+#### Bookings 
+| Description  | Steps | Expected Outcome | Results |  
+| - | - | - | - |
+| Customer Booking page | Select booking a table from navbar | Customer should direct to the booking page | PASS |
+| Form validation Booking page | Check that each required field is working correctly in the form | Form validation error should display to the user if any validation failed | PASS |
+| Submit button Booking page | Click the submit button to check that the booking details is saved in to DB | Sucess message and redirect to mybooking page | PASS |
+| Double booking | Try to book with already existing date and time | Booking should not saved, shows an alert to user for double booking  | PASS |
+| Booking for previous date | Try to bbok a table for previous date | Booking should not saved, shows an alert to user for invalid date of booking  | PASS |
+| Bookings are shown on mybookings page | Check that each booking for a user are shown on the mybookings page | Individual cards of each booking is shown with the corresponding booking details | PASS |
+| previos dates Bookings on mybookings page | Check previous dated booking listed on the mybooking page  | Mybooking page should not display the previous dated bookings | PASS |
+| Bookings can be edited | Check that the edit button works and that the updated booking is submitted to the mybooking page when edited | Booking is updated with the corresponding booking details | PASS |
+| Bookings can can be deleted | Check that the delete button works and that the deleted booking is removed from the mybooking page when deleted | Mybooking list is updated | PASS |
+
+#### Navbar
+| Description  | Steps | Expected Outcome | Results |  
+| - | - | - | - |
+| Navbar | Check that each link is working correctly | Customer is able to open each link to browse the webpage for information about the restaurant | PASS |
+
+#### Admin
+| Description  | Steps | Expected Outcome | Results |  
+| - | - | - | - |
+| Admin login - Form password validation | Submit incorrect password | Password validation error should display to the user | PASS |
+| Admin login - Form name  validation | Submit incorrect name | Name validation error should display to the user | PASS |
+| Admin login - Empty Form validation | Submit empty form | Empty Form validation error should display to the user | PASS |
+| Admin panel update booking | Go to Admin page and try to update bookings | Booking should updated with the corresponding booking details | PASS |
+| Admin panel delete booking | Go to Admin page and try to delete bookings | Booking should removed from current booking list and from Model | PASS |
+| Admin panel view booking | Go to Admin page and check the booking listed with specified details | Booking should list with staus, name , date of booking, time  | PASS |
+| Admin panel filter  booking | Go to Admin page and check filter options are working | Admin can filter the booking list based booked-status, booked time, user, | PASS |
+| Admin panel search for booking | Go to Admin page and check search funtion is working | Admin can search in the booking list based name, booked time, number of guest | PASS |
+| Admin panel filter for booking | Go to Admin page and check filter options are working | Admin can filter the booking list based booked-status, booked time, user | PASS |
+| Admin panel accept/decline booking | Go to Admin page and check accept/decline options are working | Admin can accept/decine the booking and booking status should updated accordingly | PASS |
+
+
+---
 
 ## Technologies Used
 
