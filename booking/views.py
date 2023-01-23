@@ -148,7 +148,8 @@ def edit_mybooking(request, booking_id):
     which is used to fetch the booking details from the booking
     model.And pass these details in to the django form(BookingForm)
     which helps to populate the required model fileds with corresponding
-    data in to the edit booking template
+    data in to the edit booking template.While updating the booking 
+    details, we have to change the booking status to pending.
     """
     booking_details = get_object_or_404(Booking, id=booking_id)
     if request.method == 'GET':
@@ -160,7 +161,9 @@ def edit_mybooking(request, booking_id):
     elif request.method == 'POST':
         form = BookingForm(request.POST, instance=booking_details)
         if form.is_valid():
-            form.save()
+            upated_booking_form = form.save(commit=False)
+            upated_booking_form.booking_status = 0
+            upated_booking_form.save()
             messages.success(request, "Booking has been updated. Thank you!")
             return redirect('mybooking')
         else:
