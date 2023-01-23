@@ -74,10 +74,12 @@ def reserve_table(request):
             booking_form = form.save(commit=False)
             booking_form.user = request.user
             booking_form.save()
-            messages.success(request, "Your request has been submitted")
+            messages.success(
+                request, "Your request has been submitted. Thank you!"
+                )
             return redirect('mybooking')
         else:
-            # To show the filed validation error like double booking, 
+            # To show the filed validation error like double booking,
             # invalid date etc
             show_form_errormsg(form, request)
             context = {
@@ -159,7 +161,7 @@ def edit_mybooking(request, booking_id):
         form = BookingForm(request.POST, instance=booking_details)
         if form.is_valid():
             form.save()
-            messages.success(request, "Booking has been updated")
+            messages.success(request, "Booking has been updated. Thank you!")
             return redirect('mybooking')
         else:
             # To show the filed validation error like double booking, 
@@ -176,10 +178,12 @@ def show_form_errormsg(form, request):
     customized message to the template by using django message feature.
     """
     if form.non_field_errors():
-        messages.error(request, "Invalid, incorrect info or double booking")
+        messages.error(
+            request, "Invalid entry, incorrect info or double booking"
+        )
     if form.has_error('booked_date'):
         messages.error(
-            request, 'Invalid : Date is not valid. Please select \
+            request, 'Invalid entry: Date is not valid. Please select \
                 a future date !!!'
         )
 
