@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.core.exceptions import ValidationError
+from .forms import BookingForm, ContactForm
 from django.views import View, generic
 from django.contrib import messages
-from .forms import BookingForm, ContactForm
 from .models import Booking
 import datetime
 import json
@@ -74,12 +74,13 @@ def reserve_table(request):
             booking_form = form.save(commit=False)
             booking_form.user = request.user
             booking_form.save()
+            messages.success(request, "Your request has been submitted")
             return redirect('mybooking')
         else:
-            errors = form.errors
-            print(errors)
+            # To show the filed validation error like double booking, 
+            # invalid date etc
+            show_form_errormsg(form, request)
             context = {
-                'form': form,
                 'booking_form': BookingForm()
             }
             return render(
@@ -100,8 +101,6 @@ class MyBooking(generic.ListView):
     model = Booking
     template_name = 'mybooking.html'
     now = datetime.datetime.now()
-    print(now)
-    print(now.strftime("%H:%M"))
 
     def check_valid_datetime(self, mybooking):
         """
@@ -125,13 +124,18 @@ class MyBooking(generic.ListView):
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
+            # Fetch only current user booking from nooking model
             booking_list = Booking.objects.filter(user=request.user)
+            # validate whether the booking date is expired or not
             valid_booking = filter(self.check_valid_datetime, booking_list)
             context = {
                 'bookings': valid_booking
             }
             return render(request, "mybooking.html", context=context)
         else:
+            messages.info(
+                request, "You have to SignIn first to view the booking status"
+            )
             return redirect(reverse('account_login'))
 
 
@@ -155,7 +159,29 @@ def edit_mybooking(request, booking_id):
         form = BookingForm(request.POST, instance=booking_details)
         if form.is_valid():
             form.save()
+            messages.success(request, "Booking has been updated")
             return redirect('mybooking')
+        else:
+            # To show the filed validation error like double booking, 
+            # invalid date etc
+            show_form_errormsg(form, request)
+            return redirect('mybooking')
+
+
+def show_form_errormsg(form, request):
+    """
+    show_form_errormsg method used to show the field validation
+    error message.This is generic method take form and request
+    as function parameter and based on the validation error, send
+    customized message to the template by using django message feature.
+    """
+    if form.non_field_errors():
+        messages.error(request, "Invalid, incorrect info or double booking")
+    if form.has_error('booked_date'):
+        messages.error(
+            request, 'Invalid : Date is not valid. Please select \
+                a future date !!!'
+        )
 
 
 def delete_mybooking(request, booking_id):
@@ -167,9 +193,10 @@ def delete_mybooking(request, booking_id):
     booking.
     """
     booking_detail = get_object_or_404(Booking, id=booking_id)
-    print(booking_detail.user)
-    print(request.user)
     if request.user != booking_detail.user:
+        messages.error(request, "You are not authorized")
         return redirect("mybooking")
-    booking_detail.delete()
-    return redirect('mybooking')
+    else:
+        booking_detail.delete()
+        messages.success(request, 'Booking has been deleted')
+        return redirect('mybooking')

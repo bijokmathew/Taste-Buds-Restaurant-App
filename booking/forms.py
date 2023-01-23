@@ -35,8 +35,8 @@ class BookingForm(forms.ModelForm):
         label='Date of Booking',
         required=True,
         validators=[validator.validate_future_date],
-        error_messages={'invalid': 'Date is not valid. Please select a\
-        future date !!!'},
+        error_messages={
+            'Invalid': 'Date is not valid. Please select a future date !!!'},
         widget=DateInput()
     )
 
