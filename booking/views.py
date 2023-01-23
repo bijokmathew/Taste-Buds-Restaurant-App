@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.core.exceptions import ValidationError
 from django.views import View, generic
+from django.contrib import messages
 from .forms import BookingForm, ContactForm
 from .models import Booking
 import datetime
@@ -42,9 +43,11 @@ class Home(generic.ListView):
         if form.is_valid():
             print("form is valid and save")
             form.save()
+            messages.success(request, "Your message has been sent. Thank you!")
             return redirect('home')
         else:
-            print("not valid")
+            messages.error(request, "Invalid entry, please fill the form with\
+                 correct data")
 
 
 def reserve_table(request):
