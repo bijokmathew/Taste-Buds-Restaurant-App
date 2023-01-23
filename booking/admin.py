@@ -14,7 +14,8 @@ class BookingAdmin(admin.ModelAdmin):
       filter the list based on the given options
     * Added search option in the admin panel which help to search
       booking based on the search item
-    * Added the list of filed which has to display on the booking model
+    * Added the list of field of Booking model which has to display on the
+      admin panel
     * Defined accept_booking and decline_booking for confirming or rejectiong
       the booking
     """
@@ -42,6 +43,15 @@ class BookingAdmin(admin.ModelAdmin):
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
     """
+    ContactAdmin class do the following customization
+    * By usining decorative funtion register 'Contact' model
+      with admin
+    * Added filter function in the admin panel so that admin can
+      filter the message list based on the given options
+    * Added search option in the admin panel which help to search
+      messages based on the search item
+    * Added the list of fields of contact models which has to display on 
+      the admin panel
     """
     list_display = ('name', 'subject', 'message', 'email')
     list_filter = ('subject', 'name')

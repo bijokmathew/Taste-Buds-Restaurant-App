@@ -1,4 +1,4 @@
-from .models import Booking
+from .models import Booking, Contact
 from django import forms
 from .widget import DateInput
 from .models import TIME, GUEST
@@ -59,3 +59,44 @@ class BookingForm(forms.ModelForm):
         widgets = {
                     'booked_date': DateInput()
         }
+
+
+class ContactForm(forms.ModelForm):
+    """
+    ContactForm class is created by inheriting Django Modelform.
+    And pass the Contact Model and all the model fields to display 
+    on the template.Also removed label and add placeholder and style
+    attributes to the feilds.This ContactForm class help to populate 
+    the contact model fields on the contact form template.
+    """
+    name = forms.CharField(
+        label='',
+        widget=forms.TextInput(
+            attrs={'placeholder': "Your Name", 'class': 'form-control'}
+            )
+    )
+    email = forms.EmailField(
+        label='',
+        widget=forms.EmailInput(
+            attrs={'placeholder': 'Your Email', 'class': 'form-control'}
+        )
+    )
+    subject = forms.CharField(
+        label='',
+        widget=forms.TextInput(
+            attrs={'placeholder': 'Subject', 'class': 'form-control'}
+        )
+    )
+    message = forms.CharField(
+        label='',
+        max_length=300,
+        widget=forms.Textarea(
+            attrs={
+                'placeholder': 'Message', 'class': 'form-control', 'rows': '5'
+                }
+        )
+    )
+
+    class Meta:
+        model = Contact
+        fields = '__all__'

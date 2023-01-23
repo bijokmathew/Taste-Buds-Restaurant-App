@@ -1,29 +1,50 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.core.exceptions import ValidationError
 from django.views import View, generic
-from .forms import BookingForm
+from .forms import BookingForm, ContactForm
 from .models import Booking
 import datetime
 import json
 
 
 class Home(generic.ListView):
-
+    """
+    Home is class-based view.This model used to display the homepage
+    by selecting the restaurant web url.Get method handle the get
+    request from url.py and launch the homepage.Homepage has contact
+    form, for populating the contact model fields used modelForm.
+    Post method is used to submit the contact fields data by using
+    contat model form and saved in to contact model
+    """
     def get(self, request):
         galleryDatas = []
         chefsInfo = []
         model = Booking
+        # take the image urls for Gallery section from the 
+        # gallery_data.json file present in data folder
         with open("data/gallery_data.json", "r") as json_data:
             galleryDatas = json.load(json_data)
-        template_name = 'index.html'
+        # Take the chef details for chefs section from the
+        # chefs_details.json file present in data folder
         with open("data/chefs_details.json", "r") as chef_json_data:
             chefsInfo = json.load(chef_json_data)
         template_name = 'index.html'
         context = {
             'galleryDatas': galleryDatas,
-            'chefsInfo': chefsInfo
+            'chefsInfo': chefsInfo,
+            'contactForm': ContactForm()
         }
         return render(request, template_name, context=context)
+
+    def post(self, request, *args, **kwargs):
+        # Take the user filled datas from contact form
+        form = ContactForm(data=request.POST)
+        if form.is_valid():
+            print("form is valid and save")
+            form.save()
+            return redirect('home')
+        else:
+            print("not valid")
 
 
 def reserve_table(request):

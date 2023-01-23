@@ -59,7 +59,10 @@ class Booking(models.Model):
     this is controlled by the field 'status' in the table
 
     Booking table is sorted according the descending order of booking
-    date and the magic method return name, date and time of booking
+    date and the magic method return name, date and time of booking.
+    Register this booking model with admin panel so that admin can 
+    manage booking model.
+    
 
     """
     user = models.ForeignKey(
@@ -89,6 +92,11 @@ class Booking(models.Model):
 
 class Contact(models.Model):
     """
+    Contact model used to store customer name, email,
+    subject and message in to postgresql db.String function
+    returns customer name and subject.Items saved in to db
+    based on name order.Register this contact model with admin 
+    panel so that admin can manage contact model.
     """
     name = models.CharField(max_length=80)
     email = models.EmailField()
@@ -99,6 +107,4 @@ class Contact(models.Model):
         ordering = ['name']
 
     def __str__(self):
-        """
-        """
         return f"{self.name} sent a message {self.subject}"

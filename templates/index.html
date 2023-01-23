@@ -280,6 +280,74 @@
       {% endfor %}
     </div>
   </div>
-</section>
-<!-- ================== chef section end============ -->
+</section><!-- ================== chef section end============ -->
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container">
+
+    <div class="section-title">
+      <h2><span>Contact</span> Us</h2>
+      <p>We pride ourselves on offering top class customer service to all our guests.
+         We’re here to help and want to ensure you get the very best experience.</p>
+    </div>
+  </div>
+
+  <div class="map">
+    <iframe style="border:0; width: 100%; height: 350px;"
+      src="https://maps.google.com/maps?width=600&amp;height=400&amp;\
+            hl=en&amp;q=Rathfarnham&amp;t=&amp;z=14&amp;ie=UTF8&amp;\
+            iwloc=B&amp;output=embed"
+      frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="container mt-5">
+    <div class="info-wrap">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 info">
+          <i class="bi bi-geo-alt"></i>
+          <h4>Location:</h4>
+          <p>Rathfarnam Road<br>Firhouse, Dublin</p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+          <i class="bi bi-clock"></i>
+          <h4>Open Hours:</h4>
+          <p>Monday-Saturday:<br>11:00 AM - 23:00 PM</p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+          <i class="bi bi-envelope"></i>
+          <h4>Email:</h4>
+          <p>info@example.com<br>contact@example.com</p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+          <i class="bi bi-phone"></i>
+          <h4>Call:</h4>
+          <p>+1 5589 55488 51<br>+1 5589 55688 45</p>
+        </div>
+      </div>
+    </div>
+
+    <form method="post" class="contact-form">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-6 form-group">
+          {{contactForm.name | safe}}
+        </div>
+        <div class="col-md-6 form-group mt-3 mt-md-0">
+          {{contactForm.email | safe}}
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        {{contactForm.subject | safe}}
+      </div>
+      <div class="form-group mt-3">
+        {{contactForm.message | safe}}
+      </div>
+      <div class="text-center"><button type="submit">Send Message</button></div>
+    </form>
+  </div>
+</section><!-- End Contact Section -->
 {% endblock %}
