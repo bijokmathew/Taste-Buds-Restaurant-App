@@ -2,7 +2,7 @@
 
 {% block content %}
 {% load crispy_forms_tags %}
-<div id="login-form" class="login-form">
+<div id="booking-form" class="booking-form">
   <div class="container heigth pt-5">
     <div class="row pt-5 mt-4">
       <div class="col-md-8 offset-md-2 mt-4 pt-5">
@@ -20,7 +20,7 @@
         <form method="post">
           {% csrf_token %}
           {{ booking_form.as_p }}
-          <button class="account-btn" type="submit">Send Message</button>
+          <button class="booking-btn" type="submit">Send Message</button>
         </form>
 
         {% else %}

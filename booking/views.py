@@ -77,6 +77,7 @@ def reserve_table(request):
             return redirect('mybooking')
         else:
             errors = form.errors
+            print(errors)
             context = {
                 'form': form,
                 'booking_form': BookingForm()
@@ -114,7 +115,6 @@ class MyBooking(generic.ListView):
         current_date = datetime.date.today()
         current_date_time = datetime.datetime.today()
         current_time = current_date_time.strftime("%H:%M")
-        print("current_time to string ---", current_time)
         if mybooking.booked_date == current_date and \
            mybooking.booked_time >= current_time:
             return True
