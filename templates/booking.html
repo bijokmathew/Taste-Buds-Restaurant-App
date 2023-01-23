@@ -10,12 +10,12 @@
         <h1>Reserve your table here</h1>
         <!--   To display form field validation error -->
         {% if form.errors %}
-        {% for field in form %}
-        {% for error in field.errors %}
-        <h6 class="double-booking">{{error|striptags}}</h6>
-        {% endfor %}
-        {% endfor %}
-        <h6 class="double-booking">{{form.non_field_errors|striptags}}</h6>
+          {% for field in form %}
+            {% for error in field.errors %}
+              <h6 class="double-booking">{{error|striptags}}</h6>
+            {% endfor %}
+          {% endfor %}
+          <h6 class="double-booking">{{form.non_field_errors|striptags}}</h6>
         {% endif %}
         <form method="post">
           {% csrf_token %}

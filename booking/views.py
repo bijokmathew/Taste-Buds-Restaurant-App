@@ -79,7 +79,7 @@ def reserve_table(request):
             errors = form.errors
             context = {
                 'form': form,
-                'booking_from': BookingForm()
+                'booking_form': BookingForm()
             }
             return render(
                 request, 'booking.html', context=context
