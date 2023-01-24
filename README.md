@@ -31,12 +31,12 @@ ___
     - [Book a Table](#book-a-table)
     - [My Booking](#my-booking)
     - [Delete Booking](#delete-booking)
-  -[Future Features](#future-features) 
-  -[Testing](#testing)
-    -[User Stories](#user-stories)
-    -[Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience-ux-section)
-    -[Fixed issues](#fixed-issues)
-    -[Remaing issues](#remaining-issues)
+  - [Future Features](#future-features) 
+  - [Testing](#testing)
+  - [User Stories](#user-stories)
+  - [Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience-ux-section)
+  - [Fixed issues](#fixed-issues)
+  - [Remaing issues](#remaining-issues)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks & Toolkits](#frameworks--toolkits)
@@ -108,7 +108,7 @@ ___
 
 ## Design
 
-* The theme for the project were chosen in accordance with the intended target market in mind for the restaurant. With its fancy 
+  The theme for the project were chosen in accordance with the intended target market in mind for the restaurant. With its fancy 
   looks and feel, dark colors and luxurious details and effects, the theme fits perfect for the goal of giving the visitor the impression that this is a very high quality restaurant.
 
 * Colors  
@@ -116,9 +116,11 @@ ___
   The main colors are overall dark shade of grey, white and Sea Buckthorn to provide an elegant look and feel. Furthermore, elements such as buttons, icons, symbols, links and headings are made in gold color that follows the pattern of elegance and adds to the premier look and feel of the webpage.
 
 * Font
+  
   The fonts in the theme are clear and modern and contribute perfectly to the overall elegant setting.
 
-* Images  
+* Images
+    
   The images in the theme provide great content and presentation of the restaurant and serves as an enticement for the visitors.  
 
 ## Wireframes  
@@ -160,24 +162,24 @@ ___
 
 ## Existing Features
 
-   ### Landing Page
-
-  * The landing page features a hero image with a brief description of the restaurant, it's facilities and accessibility level. The landing page is fully responsive built using bootstrap. Landing page is designed with carousel feature and uses three images.
-    
-    ![landing page image](static/images/)
-
    ### TopBar
     
    * TopBar is fully responsive and designed with black color and transparent bacgroud property.Restaurent business details like opening hours and contact number are displayed on topbar.While scrolling or moving to different page then the top bar will disappear and push the navigation bar in the place of topbar   
         
-     ![topbar image](static/images)
+     ![topbar image](static/docs/images/topbar.png)
 
    ### Navigation
    
    * The navigation bar is fully responsive and responds to the authorization status of the user. If a user is not signed then navbar shows signUp and signIn options and hide signOut and MyBooking option from the navbar.If user is try to book a table without signIn then it shown message to the user that user need to signIn?signUp first.The MyBooking and logout tab are only visible to authorized users.The restaurant name is always displayed to the left hand side for all screen. The navbar is present across all pages of the website, as it provides main source of navigation between content. 
 
-     ![image of the navigation bar with authorized user](static/images/)
-     ![image of the navigation bar with non authorized user](static/images/)
+     ![image of the navigation bar with authorized user](static/docs/images/navbar.png)
+     ![image of the navigation bar with non authorized user](static/docs/images/navbar.png)
+
+   ### Landing Page
+
+  * The landing page features a hero image with a brief description of the restaurant, it's facilities and accessibility level. The landing page is fully responsive built using bootstrap. Landing page is designed with carousel feature and uses three images.
+    
+    ![landing page image](static/docs/images/hero-section.png)
 
    ### Footer
     
@@ -185,7 +187,7 @@ ___
         
      * [Business Details of Restaurant](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/5)
      ___ 
-     ![footer image](static/images/)
+     ![footer image](static/docs/images/footer.png)
 
    ### User Creation
 
@@ -193,33 +195,34 @@ ___
         
      * [Account Registration](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/1)
      ___
-     ![image of the user sign up form](static/images/)
+     ![image of the user sign up form](static/docs/images/signUp.png)
 
    ### User SignIn/SignOut
    * User can SignIn and SignOut by using the SignIn and SignOut page.
   
-     ![image of the user sign in form](static/images/)
-     ![image of the user sign out page](static/images/)
+     ![image of the user sign in form](static/docs/images/signIn.png)
+     ![image of the user sign out page](static/docs/images/signOut.png)
 
    ### About
    * About section built in fully responsive and contain details about the restaurant like seating capacity, special food etc.
      Also contain video link about the restaurant.
       
-     ![image of the about section](static/img/)
+     ![image of the about section](static/docs/images/about.png)
 
    ### Menu
    * The menu section present all available menu items in restaurant with image description. Also group the food items on category based like starter, salads etc and category tab is displayed on the top of the menu so that user can easly navigate.
        
      * [view all restaurant menu items](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/8)
      ___
-     ![image of the menu section](static/img/)
+     ![image of the menu section](static/docs/images/menu.png)
+
    ### Chefs
    * The chef section built in full responsive and present main chefs details like name, role and social links
-     ![image of the chefs section](static/img/)
+     ![image of the chefs section](static/docs/images/chefs.png)
 
    ### Gallery
    *  Gallery section built in full responsive and display some images of restaurant.
-     ![image of the gallery section](static/img/)
+     ![image of the gallery section](static/docs/images/gallery.png)
 
    ### Book a Table
    * Booking table option takes the user to booking form to collects all the information needed for the venue to make a reservation request.User not allowed to book a table for previous dates and this is achived by adding the validation check on date and time fields.Double bookings are prevented via a unique constraint on the user, date and time fields from within the model and any validation error send back and displayed in the booking form field.
@@ -232,7 +235,7 @@ ___
      * [Double Bookings](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/7)
     
      ---
-     ![image of the booking form](static/images/)
+     ![image of the booking form](static/docs/images/book_table.png)
 
    ### My booking
    * My booking display all the future booking details of the user.It wont display the past booking details and it is achieved by filter the booking data from the model with current data and time.Also My booking given option for modifying or canceling the current booking. Modifying the existing booking will follow the same process of book a table.
@@ -240,16 +243,17 @@ ___
      * [View all table Bookings](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/3)
      * [Edit My booking details](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/issues/6)
      ---
-     ![image of the my booking ](static/images/)
-     ![image of the edit booking ](static/images/)
+     ![image of the my booking ](static/docs/images/Mybookinglist.png)
+     ![image of the edit booking ](static/docs/images/edit_bookig.png)
 
    ### Delete booking
    * When user select on the "delete" button in booking details of the mybookings page, a warning message is shown to prevent Customers from deleting their bookings by mistake. 
 
-     ![image of the delete booking](static/img/)
+     ![image of the delete booking](static/docs/images/delete_booking.png)
 
 [Return to Table of Contents](#table-of-contents)
 ___
+
 ## Future Features
 
   * The product backlog can be viewed [here](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/milestone/4).
@@ -354,7 +358,7 @@ ___
 | Admin panel accept/decline booking | Go to Admin page and check accept/decline options are working | Admin can accept/decine the booking and booking status should updated accordingly | PASS |
 &nbsp;
 ### Testing User Stories from User Experience (UX) Section
-  #### First Time Visitor Goals
+- #### First Time Visitor Goals
    * As a first time visitor I can find business hours , contact details, address.
       * User can find the business hours, cotact details on topbar and address on the footer  
    * As a first time visitor I can find out what kind of food they serve from their menu.
@@ -364,7 +368,7 @@ ___
    * As a first time visitor I can send a message to the restaurant for any specific information
       * User can go to contact form from navigation link and user can enter the details and message to send to restaurant 
         
-  #### Frequent Visitor Goals
+-  #### Frequent Visitor Goals
    * As a frequent visitor I can create an account so that I can make a reservation online.
       * User can create account by using SignUp link from the navbar  
    * As a frequent visitor I can view the menu before booking the table.
@@ -393,7 +397,8 @@ ___
   - No known ssues
 
 [Return to Table of Contents](#table-of-contents)
----
+
+___
 
 ## Technologies Used
 

@@ -1,8 +1,6 @@
 /**
-* Template Name: Delicious - v4.10.0
-* Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Project Name: Taste Buds
+* This file contain all the javascript related to this project
 */
 (function() {
   "use strict";
@@ -40,6 +38,12 @@
     el.addEventListener('scroll', listener)
   }
 
+   /**
+   * Easy on click event listener 
+   */
+   const onclick = (el, listener) => {
+    el.addEventListener('click', listener)
+  }
   /**
    * Navbar links active state on scroll
    */
@@ -50,7 +54,9 @@
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
       if (!section) return
+      console.log(navbarlink.hash)
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+        console.log(navbarlink.innerHTML)
         navbarlink.classList.add('active')
       } else {
         navbarlink.classList.remove('active')
@@ -59,6 +65,8 @@
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
+  onclick(document, navbarlinksActive)
+
 
   /**
    * Scrolls to an element with header offset
