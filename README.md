@@ -138,24 +138,29 @@ ___
 ## Development
 
 * The project was developed with the help agile methodology. During the design process collect the project requirements and write epics broken down into user stories with well defined acceptance criteria and tasks list. Based on the priority move those user stories in to different project sprint cycle like First cycle, Second cycle and Third Cycle in order to achieve MNP.Once finished the user stories moved those stories into closed state and if all issues related to the sprint closed then move the sprint cycle also in to closed state. During the development time got an enhancement ideas, create stories and moved in to backlog with priorities.
+  
+![image of user stories](static/docs/images/user_stories.png)
 
 - **Product Backlog**
     * The product backlog for the project can be found [here](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/milestone/4)
 
     * Project's all user stories on board can be found [here](https://github.com/users/bijokmathew/projects/7)
     * Project all spring cycle can be found [here](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/milestones?state=closed)
+  
+ ![image of the product backlog](static/docs/images/product_backlog-1.png)
    
 - **First Cycle**
     * The First Cycle milestone can be found [here](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/milestone/1?closed=1)
-    ![image of the First Cycle board](static/images/)
+  
+    ![image of the First Cycle board](static/docs/images/first_cycle.png)
 
 - **Second Cycle**
     * The Second Cycle milestone can be found [here](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/milestone/2?closed=1)
-    ![image of the iteration 2 board](static/images/)
+      ![image of the iteration 2 board](static/docs/images/second_cycle.png)
 
 - **Third Cycle**
     * The Third Cycle milestone can be found [here](https://github.com/bijokmathew/Taste-Buds-Restaurant-App/milestone/3?closed=1)
-    ![image of the iteration 3 board](static/images/)
+    ![image of the iteration 3 board](static/docs/images/third_cycle.png)
 
 [Return to Table of Contents](#table-of-contents)
 ___
