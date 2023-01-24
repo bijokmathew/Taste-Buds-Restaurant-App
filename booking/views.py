@@ -83,7 +83,7 @@ def reserve_table(request):
             # invalid date etc
             show_form_errormsg(form, request)
             context = {
-                'booking_form': BookingForm()
+                'booking_form': form
             }
             return render(
                 request, 'booking.html', context=context
@@ -170,7 +170,9 @@ def edit_mybooking(request, booking_id):
             # To show the filed validation error like double booking, 
             # invalid date etc
             show_form_errormsg(form, request)
-            return redirect('mybooking')
+            return render(
+                request, 'booking_edit.html', {'booking_form': form}
+            )
 
 
 def show_form_errormsg(form, request):
