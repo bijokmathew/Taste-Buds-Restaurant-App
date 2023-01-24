@@ -1,1 +1,1 @@
-web: gunicorn tastebuds.wsgi
+web: gunicorn tastebuds.wsgi.application
