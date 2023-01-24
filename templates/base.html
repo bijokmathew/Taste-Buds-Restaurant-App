@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- Template Main CSS File -->
-    <link href="{% static  'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: Taste Buds - v1.0.0
@@ -67,11 +67,11 @@
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#gallery">Gallery</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#contact">Contact</a></li>
                     {% if user.is_authenticated %}
-                    <li><a class="nav-link scrollto" href="{% url 'account_logout' %}">SignOut</a></li>
-                    <li><a class="nav-link scrollto" href="{% url 'mybooking' %}">My Bookings</a></li>
+                    <li><a class="nav-link scrollto new-page" href="{% url 'account_logout' %}">SignOut</a></li>
+                    <li><a class="nav-link scrollto new-page" href="{% url 'mybooking' %}">My Bookings</a></li>
                     {% else %}
-                    <li><a class="nav-link scrollto" href="{% url 'account_signup' %}">SignUp</a></li>
-                    <li><a class="nav-link scrollto" href="{% url 'account_login' %}">SignIn</a></li>
+                    <li><a class="nav-link scrollto new-page" href="{% url 'account_signup' %}">SignUp</a></li>
+                    <li><a class="nav-link scrollto new-page" href="{% url 'account_login' %}">SignIn</a></li>
                     {% endif %}
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>

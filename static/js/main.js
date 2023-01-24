@@ -21,6 +21,7 @@
    * Easy event listener function
    */
   const on = (type, el, listener, all = false) => {
+    console.log("bijo","on --<",el)
     let selectEl = select(el, all)
     if (selectEl) {
       if (all) {
@@ -51,12 +52,11 @@
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
     navbarlinks.forEach(navbarlink => {
+  
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
       if (!section) return
-      console.log(navbarlink.hash)
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        console.log(navbarlink.innerHTML)
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)|| navbarlink.hash=='#'  ) {
         navbarlink.classList.add('active')
       } else {
         navbarlink.classList.remove('active')
@@ -90,7 +90,6 @@
   let selectTopbar = select('#topbar')
   let selectNewPage = select('#mybooking')
   let selectMessageBar = select('#message-bar')
-  console.log(selectNewPage)
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100 || selectNewPage) {
@@ -133,11 +132,14 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
+  console.log("Bijo")
+  on('click', '#navbar .new-page', function(e) {
+    console.log("Bijo inside new page")
+    var current = document.getElementsByClassName("active");
+    console.log("bkm",current )
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  }, true)
 
   /**
    * Mobile nav dropdowns activate
@@ -146,6 +148,21 @@
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
+    }
+  }, true)
+
+  on('click', '.scrollto', function(e) {
+    if (select(this.hash)) {
+      e.preventDefault()
+
+      let navbar = select('#navbar')
+      if (navbar.classList.contains('navbar-mobile')) {
+        navbar.classList.remove('navbar-mobile')
+        let navbarToggle = select('.mobile-nav-toggle')
+        navbarToggle.classList.toggle('bi-list')
+        navbarToggle.classList.toggle('bi-x')
+      }
+      scrollto(this.hash)
     }
   }, true)
 
