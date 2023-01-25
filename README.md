@@ -2,7 +2,7 @@
 
 This restaurant booking application built using Django, and allows customer to register and make reservation requests. Customer can view, amend and delete later if it is required. Administrator of the restaurant can also able to accept or decline these requests and view all reservations in order to make business decisions. Key contact details, business hors and the restaurants menu are also provided within the application, as well as links to the companies social media accounts.It is the fourth project in the Code institute Full Stack Developer program.
 
-![image of lighthouse results for desktop](static/images/)
+![image of lighthouse results for desktop](static/docs/images/Taste-Buds-resp.png)
 ___
 - ## Table of Contents
 
