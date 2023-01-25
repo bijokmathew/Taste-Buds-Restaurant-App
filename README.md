@@ -129,8 +129,9 @@ ___
     - [For Mobile view](docs/)    
 
 ## Database Schema  
-  The database design schema can be viewed below. It consists of a Booking model with a foreignKey of User that relates to the Django standard User model class.  
-    ![dbschema](docs/img/)  
+*  The database design schema can be viewed below. It consists of a Booking model with a foreignKey of User that relates to the Django standard User model class and contact model for saving the cutomer queries.
+
+    ![dbschema](static/docs/images/database-schema.png)  
 
 [Return to Table of Contents](#table-of-contents)
 ___
