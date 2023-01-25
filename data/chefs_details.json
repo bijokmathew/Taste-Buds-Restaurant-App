@@ -2,7 +2,7 @@
     {
         "name": "Jake Johnson",
         "post": "Master Chef",
-        "pic":"/static/img/chefs/chefs-1.jpg",
+        "pic":"{% static 'img/chefs/chefs-1.jpg' %}",
         "twitter": "https://twitter.com/",
         "facebook": "https://www.facebook.com/",
         "instagram": "https://www.instagram.com/",

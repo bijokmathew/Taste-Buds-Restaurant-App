@@ -311,13 +311,17 @@ h6 {
   overflow: hidden;
   padding: 0;
 }
-
-#hero .carousel-item {
-  width: 100%;
-  height: 100vh;
+.hero-slide-1{
+  
+  background: url("https://res.cloudinary.com/drulpekag/image/upload/v1674576262/static/img/slide/slide-1.b4d0374700ad.jpg") center center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+}
+
+#hero .carousel-item {
+  height: 100vh;
+  width: 100%; 
 }
 
 #hero .carousel-item::before {
@@ -781,7 +785,8 @@ section {
 # Chefs
 --------------------------------------------------------------*/
 .chefs {
-  background: url("../img/chefs-bg.jpg") center center no-repeat;
+  background-image: url("/static/img/chefs-bg.jpg") center center no-repeat;
+ 
   background-size: cover;
   padding: 60px 0;
   position: relative;
@@ -998,7 +1003,7 @@ section {
 
 .booking-form,
 .login-form {
-  background-image: url(../../static/img/slide/slide-1.jpg);
+  background-image: url("/static/img/slide/slide-1.jpg");
   transition-property: opacity;
   background-position: right top;
   color: white;
