@@ -125,8 +125,8 @@ ___
 
 ## Wireframes  
 * A separate document for the wireframes can be viewed here: 
-    - [For Desktop view](docs/)
-    - [For Mobile view](docs/)    
+    - [For Desktop view](static/docs/images/wire-frame-desktop.md)
+    - [For Mobile view](static/docs/images/wire-frame-mobile.md)    
 
 ## Database Schema  
 *  The database design schema can be viewed below. It consists of a Booking model with a foreignKey of User that relates to the Django standard User model class and contact model for saving the cutomer queries.
