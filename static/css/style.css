@@ -998,7 +998,6 @@ section {
 
 .booking-form,
 .login-form {
-  background-image: url("/static/img/slide/slide-1.jpg");
   transition-property: opacity;
   background-position: right top;
   color: white;
