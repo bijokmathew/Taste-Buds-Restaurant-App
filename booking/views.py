@@ -18,21 +18,9 @@ class Home(generic.ListView):
     contat model form and saved in to contact model
     """
     def get(self, request):
-        galleryDatas = []
-        chefsInfo = []
         model = Booking
-        # take the image urls for Gallery section from the 
-        # gallery_data.json file present in data folder
-        with open("data/gallery_data.json", "r") as json_data:
-            galleryDatas = json.load(json_data)
-        # Take the chef details for chefs section from the
-        # chefs_details.json file present in data folder
-        with open("data/chefs_details.json", "r") as chef_json_data:
-            chefsInfo = json.load(chef_json_data)
         template_name = 'index.html'
         context = {
-            'galleryDatas': galleryDatas,
-            'chefsInfo': chefsInfo,
             'contactForm': ContactForm()
         }
         return render(request, template_name, context=context)

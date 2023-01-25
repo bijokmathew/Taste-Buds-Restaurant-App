@@ -311,17 +311,12 @@ h6 {
   overflow: hidden;
   padding: 0;
 }
-.hero-slide-1{
-  
-  background: url("https://res.cloudinary.com/drulpekag/image/upload/v1674576262/static/img/slide/slide-1.b4d0374700ad.jpg") center center;
-  background-repeat: no-repeat;
+#hero .carousel-item {
+  width: 100%;
+  height: 100vh;
   background-size: cover;
   background-position: center;
-}
-
-#hero .carousel-item {
-  height: 100vh;
-  width: 100%; 
+  background-repeat: no-repeat;
 }
 
 #hero .carousel-item::before {
