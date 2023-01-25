@@ -50,6 +50,10 @@ ___
   - [Deploying with Heroku](#deploying-with-heroku)
     - [Create a Local Clone ](#create-a-local-clone-)
     - [Forking the GitHub Repository](#forking-the-github-repository)
+  - [Credits](#credits)
+    - [Code](#code)
+    - [Media](#media)
+    - [acknowledgement](#acknowledgements)  
 ___
 ## User Experience (UX)
 ### Site Goal
@@ -697,3 +701,25 @@ ___
    
 [Return to Table of Contents](#table-of-contents)
 ___
+## Credits
+
+### Code
+  - [Restaurantly Boostrap theme](https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/#download-template/) was the Boostrap theme used in this project.
+  - [Django Documenation](https://www.djangoproject.com/) was used to provide examples of code solutions and Django functionality.
+  - [Bootstrap Documenation](https://getbootstrap.com/) was used to provide examples of Bootstrap functionality and building blocks.
+  - [Code Institute walkthrough](https://codeinstitute.net/) as inspiration and code examples, the code institute walkthroughs "Hello Django" and "I Think Therefore I Blog" was used.
+  - Stackoverflow, youtube and other online resources uesed as a reference during the development of this project
+
+### Content
+  - The texts that are used for im hero ,about sections took from some restaurant site like(https://indiespicegrill.ie/naas/)).
+
+### Media
+  - The images used in the project took from the [Restaurantly Boostrap theme](https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/#download-template)
+  - The video used in the project took from the [Restaurantly Boostrap theme](https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/#download-template)
+
+### Acknowledgements
+   #### For code inspiration, design inputs, help and advice. Many thanks to:
+  - My mentor Martina Terlevic at Code Institute and she guided me throught the project. 
+  - The Code Institute Slack community and friends.
+
+ [Return to Table of Contents](#table-of-contents)
