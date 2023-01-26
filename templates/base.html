@@ -66,6 +66,7 @@
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#gallery">Gallery</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#chefs">Chefs</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#contact">Contact</a></li>
+                    <!-- Show signOut and booking only for authorized user -->
                     {% if user.is_authenticated %}
                     <li><a class="nav-link scrollto new-page" href="{% url 'account_logout' %}">SignOut</a></li>
                     <li><a class="nav-link scrollto new-page" href="{% url 'mybooking' %}#mybooking">My Bookings</a></li>
