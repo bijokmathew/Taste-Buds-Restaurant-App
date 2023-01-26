@@ -19,6 +19,7 @@
                             <p><i class="far fa-envelope  "></i> {{ booking.email }}</p>
                             <p><span>Guests: </span> {{ booking.number_guest }}</p>
                             <div class="h6">
+                                <!-- Diplay bookeing status based on the status in booking model -->
                                 <span> status:
                                     {% if booking.booking_status == 0 %}
                                     <span>Pending</span>
@@ -39,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Modal delte booling-->
+            <!-- Modal delete booling-->
             <div class="modal fade" id="deleteModal_{{ booking.id }}" tabindex="-1" aria-labelledby="deleteModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
