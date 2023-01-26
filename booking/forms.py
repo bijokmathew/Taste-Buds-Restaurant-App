@@ -21,6 +21,7 @@ class BookingForm(forms.ModelForm):
 
     email = forms.EmailField(
             label='E-Mail (Optinal)',
+            required=False,
             widget=forms.TextInput(attrs={'placeholder': 'E-mail address'}),
     )
 
