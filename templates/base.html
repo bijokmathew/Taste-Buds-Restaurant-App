@@ -60,7 +60,7 @@
             </div>
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="{% url 'home' %}#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#about">About</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#menu">Menu</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#gallery">Gallery</a></li>
@@ -68,7 +68,7 @@
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#contact">Contact</a></li>
                     {% if user.is_authenticated %}
                     <li><a class="nav-link scrollto new-page" href="{% url 'account_logout' %}">SignOut</a></li>
-                    <li><a class="nav-link scrollto new-page" href="{% url 'mybooking' %}">My Bookings</a></li>
+                    <li><a class="nav-link scrollto new-page" href="{% url 'mybooking' %}#mybooking">My Bookings</a></li>
                     {% else %}
                     <li><a class="nav-link scrollto new-page" href="{% url 'account_signup' %}">SignUp</a></li>
                     <li><a class="nav-link scrollto new-page" href="{% url 'account_login' %}">SignIn</a></li>

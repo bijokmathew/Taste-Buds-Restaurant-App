@@ -21,7 +21,6 @@
    * Easy event listener function
    */
   const on = (type, el, listener, all = false) => {
-    console.log("bijo","on --<",el)
     let selectEl = select(el, all)
     if (selectEl) {
       if (all) {
@@ -51,12 +50,11 @@
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
-    navbarlinks.forEach(navbarlink => {
-  
+       navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
       if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)|| navbarlink.hash=='#'  ) {
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active')
       } else {
         navbarlink.classList.remove('active')
@@ -65,7 +63,7 @@
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
-  onclick(document, navbarlinksActive)
+
 
 
   /**
@@ -82,36 +80,28 @@
     })
   }
 
-  /**
-   * Toggle .header-scrolled class to #header when page is scrolled or
-   * move to new page
+   /**
+   * Toggle .header-scrolled class to #header when page is scrolled
    */
-  let selectHeader = select('#header')
-  let selectTopbar = select('#topbar')
-  let selectNewPage = select('#mybooking')
-  let selectMessageBar = select('#message-bar')
-  if (selectHeader) {
-    const headerScrolled = () => {
-      if (window.scrollY > 100 || selectNewPage) {
-        selectHeader.classList.add('header-scrolled')
-        if (selectTopbar) {
-          selectTopbar.classList.add('topbar-scrolled')
-        }
-        selectMessageBar.classList.add('message-scrolled')
-
-      } else {
-        selectHeader.classList.remove('header-scrolled')
-        if (selectTopbar) {
-          selectTopbar.classList.remove('topbar-scrolled')
-        }
-       
-        selectMessageBar.classList.remove('message-scrolled')
-        
-      }
-    }
-    window.addEventListener('load', headerScrolled)
-    onscroll(document, headerScrolled)
-  }
+   let selectHeader = select('#header')
+   let selectTopbar = select('#topbar')
+   if (selectHeader) {
+     const headerScrolled = () => {
+       if (window.scrollY > 100) {
+         selectHeader.classList.add('header-scrolled')
+         if (selectTopbar) {
+           selectTopbar.classList.add('topbar-scrolled')
+         }
+       } else {
+         selectHeader.classList.remove('header-scrolled')
+         if (selectTopbar) {
+           selectTopbar.classList.remove('topbar-scrolled')
+         }
+       }
+     }
+     window.addEventListener('load', headerScrolled)
+     onscroll(document, headerScrolled)
+   }
   
   /**
    * Back to top button
@@ -129,19 +119,7 @@
     onscroll(document, toggleBacktotop)
   }
 
-  /**
-   * Mobile nav toggle
-   */
-  console.log("Bijo")
-  on('click', '#navbar .new-page', function(e) {
-    console.log("Bijo inside new page")
-    var current = document.getElementsByClassName("active");
-    console.log("bkm",current )
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  }, true)
-
-  /**
+    /**
    * Mobile nav dropdowns activate
    */
   on('click', '.navbar .dropdown > a', function(e) {
