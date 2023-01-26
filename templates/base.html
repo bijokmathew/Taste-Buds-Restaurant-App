@@ -56,28 +56,28 @@
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
             <div class="logo me-auto">
-                <h1><a href="{% url 'home' %}">Taste Buds</a></h1>
+                <h1><a href="{% url 'home' %}" aria-label="title">Taste Buds</a></h1>
             </div>
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="{% url 'home' %}#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="{% url 'home' %}#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="{% url 'home' %}#menu">Menu</a></li>
-                    <li><a class="nav-link scrollto" href="{% url 'home' %}#gallery">Gallery</a></li>
-                    <li><a class="nav-link scrollto" href="{% url 'home' %}#chefs">Chefs</a></li>
-                    <li><a class="nav-link scrollto" href="{% url 'home' %}#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto active" aria-label="home" href="{% url 'home' %}#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" aria-label="about" href="{% url 'home' %}#about">About</a></li>
+                    <li><a class="nav-link scrollto" aria-label="menu" href="{% url 'home' %}#menu">Menu</a></li>
+                    <li><a class="nav-link scrollto" aria-label="gallery" href="{% url 'home' %}#gallery">Gallery</a></li>
+                    <li><a class="nav-link scrollto" aria-label="chef" href="{% url 'home' %}#chefs">Chefs</a></li>
+                    <li><a class="nav-link scrollto" aria-label="contact" href="{% url 'home' %}#contact">Contact</a></li>
                     <!-- Show signOut and booking only for authorized user -->
                     {% if user.is_authenticated %}
-                    <li><a class="nav-link scrollto new-page" href="{% url 'account_logout' %}">SignOut</a></li>
-                    <li><a class="nav-link scrollto new-page" href="{% url 'mybooking' %}#mybooking">My Bookings</a></li>
+                    <li><a class="nav-link scrollto new-page" aria-label="signout" href="{% url 'account_logout' %}">SignOut</a></li>
+                    <li><a class="nav-link scrollto new-page" aria-label="mybooking" href="{% url 'mybooking' %}#mybooking">My Bookings</a></li>
                     {% else %}
-                    <li><a class="nav-link scrollto new-page" href="{% url 'account_signup' %}">SignUp</a></li>
-                    <li><a class="nav-link scrollto new-page" href="{% url 'account_login' %}">SignIn</a></li>
+                    <li><a class="nav-link scrollto new-page" aria-label="signUp" href="{% url 'account_signup' %}">SignUp</a></li>
+                    <li><a class="nav-link scrollto new-page" aria-label="signin" href="{% url 'account_login' %}">SignIn</a></li>
                     {% endif %}
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
-            <a href="{% url 'booking' %}" class="book-a-table-btn scrollto">Book a table</a>
+            <a href="{% url 'booking' %}" aria-label="book a table" class="book-a-table-btn scrollto">Book a table</a>
         </div>
     </header><!-- End Header -->
     <!-- ====== Message Alert container ===== -->
@@ -105,10 +105,10 @@
             <h3>Taste Buds</h3>
             <p>Rathfarnam Road, Firhouse, opposite of Garda station, Dublin</p>
             <div class="social-links">
-                <a href="https://twitter.com" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="https://www.facebook.com/" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="https://www.instagram.com/" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="https://www.linkedin.com/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://twitter.com" aria-label="twitter" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.facebook.com/" aria-label="facebook" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/" aria-label="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/" aria-label="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
             <div class="copyright">
                 &copy; Copyright <strong><span>Taste Buds</span></strong>. All Rights Reserved

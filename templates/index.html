@@ -5,39 +5,39 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero">
   <div class="hero-container">
-    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
-      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-      <div class="carousel-inner" role="listbox">
+    <div id="heroCarousel" data-bs-interval="5000" aria-label="hero-section" role="presentation" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <ol class="carousel-indicators" id="hero-carousel-indicators" role="presentation" aria-label="hero-section"></ol>
+      <div class="carousel-inner" role="listbox" aria-label="hero-section">
         <!-- Slide 1 -->
-        <div class="carousel-item active"
+        <div class="carousel-item active" role="presentation" aria-label="hero"
           style="background-image: url(https://res.cloudinary.com/drulpekag/image/upload/v1674576262/static/img/slide/slide-1.b4d0374700ad.jpg);">
-          <div class="carousel-container">
-            <div class="carousel-content">
-              <h2 class="animate__animated animate__fadeInDown"><span>Taste Buds</span> Restaurant</h2>
-              <p class="animate__animated animate__fadeInUp">We travel, we curate, we entertain and excite, we serve to
+          <div class="carousel-container" role="presentation" aria-label="hero-section">
+            <div class="carousel-content" role="presentation" aria-label="hero-section">
+              <h2 class="animate__animated animate__fadeInDown" role="presentation" aria-label="hero-section"><span>Taste Buds</span> Restaurant</h2>
+              <p class="animate__animated animate__fadeInUp" role="presentation" aria-label="hero-section">We travel, we curate, we entertain and excite, we serve to
                 exceed expectations. An exceptional spectacle of Indian cuisine, our experienced and dedicated chefs
                 make every meal at our restaurant a tastesensation.
               </p>
-              <div>
-                <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                <a href="{% url 'booking' %}" class="btn-book animate__animated animate__fadeInUp scrollto">Book a
+              <div aria-label="button" role="button">
+                <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto" role="button" aria-label="menu">Our Menu</a>
+                <a href="{% url 'booking' %}" class="btn-book animate__animated animate__fadeInUp scrollto" role="button" aria-label="book a table">Book a
                   Table</a>
               </div>
             </div>
           </div>
         </div>
         <!-- Slide 2 -->
-        <div class="carousel-item"
+        <div class="carousel-item" role="presentation" aria-label="hero"
           style="background-image: url(https://res.cloudinary.com/drulpekag/image/upload/v1674576263/static/img/slide/slide-2.f00ddca7255f.jpg);">
-          <div class="carousel-container">
-            <div class="carousel-content">
-              <h2 class="animate__animated animate__fadeInDown">Totally India Locally</h2>
-              <p class="animate__animated animate__fadeInUp">Our unique fusion makes for a healthy menu with maximum
+          <div class="carousel-container" role="presentation" aria-label="hero">
+            <div class="carousel-content" role="presentation" aria-label="hero">
+              <h2 class="animate__animated animate__fadeInDown" role="presentation" aria-label="hero-section">Totally India Locally</h2>
+              <p class="animate__animated animate__fadeInUp" role="presentation" aria-label="hero-section">Our unique fusion makes for a healthy menu with maximum
                 flavour and aroma.Passionate about great food and inspired by our Swords home, our contemporary menu
                 fuses fine Indian cuisine with the best local produce and seasonal ingredients.</p>
-              <div>
-                <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                <a href="{% url 'booking' %}" class="btn-book animate__animated animate__fadeInUp scrollto">Book a
+              <div aria-label="button" role="button">
+                <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto" aria-label="menu" role="button">Our Menu</a>
+                <a href="{% url 'booking' %}" class="btn-book animate__animated animate__fadeInUp scrollto" role="button" aria-label="book a table">Book a
                   Table</a>
               </div>
             </div>
@@ -45,17 +45,17 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item"
+        <div class="carousel-item" role="presentation" aria-label="hero-section"
           style="background-image: url(https://res.cloudinary.com/drulpekag/image/upload/v1674576264/static/img/slide/slide-3.75462895bba6.jpg);">
-          <div class="carousel-container">
-            <div class="carousel-content">
-              <h2 class="animate__animated animate__fadeInDown">Book a Table</h2>
-              <p class="animate__animated animate__fadeInUp">Make your reservation today and try our eclectic and
+          <div class="carousel-container" role="presentation" aria-label="hero-section">
+            <div class="carousel-content" role="presentation" aria-label="hero-section">
+              <h2 class="animate__animated animate__fadeInDown" role="button" aria-label="hero-section" >Book a Table</h2>
+              <p class="animate__animated animate__fadeInUp" role="presentation" aria-label="hero-section">Make your reservation today and try our eclectic and
                 contemporary menu, we bring together the best of India with the finest seasonal local ingredients.
                 Sensational fusion of eastern wonder and local provenance. </p>
-              <div>
-                <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                <a href="{% url 'booking' %}" class="btn-book animate__animated animate__fadeInUp scrollto">Book a
+              <div aria-label="button" role="button">
+                <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto" aria-label="menu" role="button">Our Menu</a>
+                <a href="{% url 'booking' %}" class="btn-book animate__animated animate__fadeInUp scrollto" aria-label="book a table" role="button">Book a
                   Table</a>
               </div>
             </div>
@@ -63,11 +63,11 @@
         </div>
       </div>
 
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" aria-label="slider-button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
       </a>
 
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+      <a class="carousel-control-next" href="#heroCarousel" role="button" aria-label="slider-button" data-bs-slide="next">
         <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
       </a>
 
@@ -80,7 +80,7 @@
     <div class="row">
       <div class="col-lg-5 align-items-stretch video-box"
         style='background-image: url(https://res.cloudinary.com/drulpekag/image/upload/v1674576306/static/img/about.e1e9ce8530d5.jpg);'>
-        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q"  aria-label="about-youtube" class="venobox play-btn mb-4" data-vbtype="video"
           data-autoplay="true"></a>
       </div>
 
@@ -139,7 +139,7 @@
 
       <div class="col-lg-6 menu-item filter-starters">
         <div class="menu-content">
-          <a href="#">Aloo Tiki M,C</a><span>$5.95</span>
+          <a href="#" aria-label="Aloo Tiki">Aloo Tiki M,C</a><span>$5.95</span>
         </div>
         <div class="menu-ingredients">
           A potato cake served with chick peas - topped with mint, turmeric and fresh coriander
@@ -148,7 +148,7 @@
 
       <div class="col-lg-6 menu-item filter-specialty">
         <div class="menu-content">
-          <a href="#">Chicken Pakora C,G</a><span>$6.95</span>
+          <a href="#" aria-label="Chicken Pakora">Chicken Pakora C,G</a><span>$6.95</span>
         </div>
         <div class="menu-ingredients">
           Strips of chicken breast slightly spiced, dipped in gram flour batter and deep fried
@@ -157,7 +157,7 @@
 
       <div class="col-lg-6 menu-item filter-starters">
         <div class="menu-content">
-          <a href="#">Hariyali Kebab N ew M,C,E</a><span>$7.95</span>
+          <a href="#" aria-label="Hariyali kebab">Hariyali Kebab N ew M,C,E</a><span>$7.95</span>
         </div>
         <div class="menu-ingredients">
           Drumstick of chicken, marinated in roast gram flour, egg, yogurt, cream with mint spinach completed in clay
@@ -167,7 +167,7 @@
 
       <div class="col-lg-6 menu-item filter-salads">
         <div class="menu-content">
-          <a href="#">Lamb Seekh Chat E,C</a><span>$8.95</span>
+          <a href="#" aria-label="Lamb Seekh Chat">Lamb Seekh Chat E,C</a><span>$8.95</span>
         </div>
         <div class="menu-ingredients">
           Grilled minced lamb, tossed with onions and tomato sauce, flavoured with mild spices and chargrilled
@@ -176,7 +176,7 @@
 
       <div class="col-lg-6 menu-item filter-specialty">
         <div class="menu-content">
-          <a href="#">Goan Prawn Curry M,MS</a><span>$9.95</span>
+          <a href="#" aria-label="Goan Prawn Curry">Goan Prawn Curry M,MS</a><span>$9.95</span>
         </div>
         <div class="menu-ingredients">
           King prawns cooked in onion sauce, coconut milk, flavoured with curry leaves and fresh coriander
@@ -185,7 +185,7 @@
 
       <div class="col-lg-6 menu-item filter-starters">
         <div class="menu-content">
-          <a href="#">Mozzarella Stick</a><span>$4.95</span>
+          <a href="#" aria-label="Mozzarella Stick">Mozzarella Stick</a><span>$4.95</span>
         </div>
         <div class="menu-ingredients">
           Lorem, deren, trataro, filede, nerada
@@ -194,7 +194,7 @@
 
       <div class="col-lg-6 menu-item filter-salads">
         <div class="menu-content">
-          <a href="#">Greek Salad</a><span>$9.95</span>
+          <a href="#" aria-label="Greek Salad">Greek Salad</a><span>$9.95</span>
         </div>
         <div class="menu-ingredients">
           Fresh spinach, crisp romaine, tomatoes, and Greek olives
@@ -203,7 +203,7 @@
 
       <div class="col-lg-6 menu-item filter-salads">
         <div class="menu-content">
-          <a href="#">Spinach Salad</a><span>$9.95</span>
+          <a href="#" aria-label="Spinach Salad">Spinach Salad</a><span>$9.95</span>
         </div>
         <div class="menu-ingredients">
           Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
@@ -212,7 +212,7 @@
 
       <div class="col-lg-6 menu-item filter-specialty">
         <div class="menu-content">
-          <a href="#">Jhinga Mirchiwala C</a><span>$12.95</span>
+          <a href="#" aria-label="Jhinga Mirchiwala">Jhinga Mirchiwala C</a><span>$12.95</span>
         </div>
         <div class="menu-ingredients">
           Jumbo king prawns cooked with tangy tomatoes, cumin, garam masala, crushed coriander,
@@ -231,56 +231,56 @@
     <div class="row g-0">
       <div class="col-lg-3 col-md-4">
         <div class="gallery-item">
-          <a href="{% static 'img/gallery/gallery-1.jpg' %}" class="gallery-lightbox">
+          <a href="{% static 'img/gallery/gallery-1.jpg' %}" aria-label="gallery-item" class="gallery-lightbox">
             <img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
           </a>
         </div>
       </div>
       <div class="col-lg-3 col-md-4">
         <div class="gallery-item">
-          <a href="{% static 'img/gallery/gallery-2.jpg' %}" class="gallery-lightbox">
+          <a href="{% static 'img/gallery/gallery-2.jpg' %}" aria-label="gallery-item" class="gallery-lightbox">
             <img src="{% static 'img/gallery/gallery-2.jpg' %}" alt="" class="img-fluid">
           </a>
         </div>
       </div>
       <div class="col-lg-3 col-md-4">
         <div class="gallery-item">
-          <a href="{% static 'img/gallery/gallery-3.jpg' %}" class="gallery-lightbox">
+          <a href="{% static 'img/gallery/gallery-3.jpg' %}" aria-label="gallery-item" class="gallery-lightbox">
             <img src="{% static 'img/gallery/gallery-3.jpg' %}" alt="" class="img-fluid">
           </a>
         </div>
       </div>
       <div class="col-lg-3 col-md-4">
         <div class="gallery-item">
-          <a href="{% static 'img/gallery/gallery-4.jpg' %}" class="gallery-lightbox">
+          <a href="{% static 'img/gallery/gallery-4.jpg' %}" aria-label="gallery-item" class="gallery-lightbox">
             <img src="{% static 'img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
           </a>
         </div>
       </div>
       <div class="col-lg-3 col-md-4">
         <div class="gallery-item">
-          <a href="{% static 'img/gallery/gallery-5.jpg' %}" class="gallery-lightbox">
+          <a href="{% static 'img/gallery/gallery-5.jpg' %}" aria-label="gallery-item" class="gallery-lightbox">
             <img src="{% static 'img/gallery/gallery-5.jpg' %}" alt="" class="img-fluid">
           </a>
         </div>
       </div>
       <div class="col-lg-3 col-md-4">
         <div class="gallery-item">
-          <a href="{% static 'img/gallery/gallery-6.jpg' %}" class="gallery-lightbox">
+          <a href="{% static 'img/gallery/gallery-6.jpg' %}" aria-label="gallery-item" class="gallery-lightbox">
             <img src="{% static 'img/gallery/gallery-6.jpg' %}" alt="" class="img-fluid">
           </a>
         </div>
       </div>
       <div class="col-lg-3 col-md-4">
         <div class="gallery-item">
-          <a href="{% static 'img/gallery/gallery-7.jpg' %}" class="gallery-lightbox">
+          <a href="{% static 'img/gallery/gallery-7.jpg' %}" aria-label="gallery-item" class="gallery-lightbox">
             <img src="{% static 'img/gallery/gallery-7.jpg' %}" alt="" class="img-fluid">
           </a>
         </div>
       </div>
       <div class="col-lg-3 col-md-4">
         <div class="gallery-item">
-          <a href="{% static 'img/gallery/gallery-8.jpg' %}" class="gallery-lightbox">
+          <a href="{% static 'img/gallery/gallery-8.jpg' %}" aria-label="gallery-item" class="gallery-lightbox">
             <img src="{% static 'img/gallery/gallery-8.jpg' %}" alt="" class="img-fluid">
           </a>
         </div>
@@ -304,10 +304,10 @@
             <h4>Walter White</h4>
             <span>Master Chef</span>
             <div class="social">
-              <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
-              <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+              <a href="https://twitter.com/" aria-label="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.facebook.com/" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/" aria-label="linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -319,10 +319,10 @@
             <h4>Alice Thomas</h4>
             <span>Patissier</span>
             <div class="social">
-              <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
-              <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+              <a href="https://twitter.com/" aria-label="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.facebook.com/" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/" aria-label="linkedln"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -334,10 +334,10 @@
             <h4>George Bush</h4>
             <span>Cook</span>
             <div class="social">
-              <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
-              <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+              <a href="https://twitter.com/" aria-label="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.facebook.com/" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/" aria-label="linkedln"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -358,7 +358,7 @@
   </div>
 
   <div class="map">
-    <iframe style="border:0; width: 100%; height: 350px;" src="https://maps.google.com/maps?width=600&amp;height=400&amp;\
+    <iframe title="google-map" style="border:0; width: 100%; height: 350px;" src="https://maps.google.com/maps?width=600&amp;height=400&amp;\
             hl=en&amp;q=Rathfarnham&amp;t=&amp;z=14&amp;ie=UTF8&amp;\
             iwloc=B&amp;output=embed" frameborder="0" allowfullscreen></iframe>
   </div>

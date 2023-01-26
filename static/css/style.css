@@ -161,12 +161,12 @@ h6 {
 --------------------------------------------------------------*/
 .book-a-table-btn {
   background: #ffb03b;
-  color: #fff;
+  color: rgb(255, 255, 255);
   border-radius: 50px;
   margin: 0 0 0 20px;
   padding: 10px 25px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
   transition: 0.3s;
   white-space: nowrap;
