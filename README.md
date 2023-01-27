@@ -1,8 +1,11 @@
  Tase Buds Restaurant Booking App
 
+ ![image of lighthouse results for desktop](static/docs/images/Taste-Buds-resp.png)
+
 This restaurant booking application built using Django, and allows customer to register and make reservation requests. Customer can view, amend and delete later if it is required. Administrator of the restaurant can also able to accept or decline these requests and view all reservations in order to make business decisions. Key contact details, business hors and the restaurants menu are also provided within the application, as well as links to the companies social media accounts.It is the fourth project in the Code institute Full Stack Developer program.
 
-![image of lighthouse results for desktop](static/docs/images/Taste-Buds-resp.png)
+[View the live project here.](https://firehouse-restaurant.herokuapp.com/)
+
 ___
 - ## Table of Contents
 
@@ -405,6 +408,17 @@ ___
 
 ### Remaining Issues
   - No known ssues
+### Further Testing
+-   The website was thoroughly tested on different browsers including Google Chrome, Internet Explorer, Safar and Microsoft Edge. Extensive testing was performed to make sure all the links and navigation work properly. Testing on different devices to make sure it scales properly using the below tools:  
+
+-   [Google Devtools](https://developer.chrome.com/docs/devtools/open/)    
+
+-   [W3C Markup Validator](https://validator.w3.org/nu/)  
+
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
+
+-   [Python Validator](https://extendsclass.com/python-tester.html#:~:text=To%20check%20your%20code%2C%20you,use%20this%20python%20checker%20tool.) 
+
 
 [Return to Table of Contents](#table-of-contents)
 
