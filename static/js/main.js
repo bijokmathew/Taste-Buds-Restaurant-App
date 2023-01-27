@@ -1,8 +1,8 @@
 /**
-* Project Name: Taste Buds
-* This file contain all the javascript related to this project
-*/
-(function() {
+ * Project Name: Taste Buds
+ * This file contain all the javascript related to this project
+ */
+(function () {
   "use strict";
 
   /**
@@ -38,10 +38,10 @@
     el.addEventListener('scroll', listener)
   }
 
-   /**
+  /**
    * Easy on click event listener 
    */
-   const onclick = (el, listener) => {
+  const onclick = (el, listener) => {
     el.addEventListener('click', listener)
   }
   /**
@@ -51,14 +51,13 @@
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
     navbarlinks.forEach(navbarlink => {
-  
-      if (!navbarlink.hash){
-        console.log("BKM==>", navbarlink)
+
+      if (!navbarlink.hash)
         return
-      } 
+
       let section = select(navbarlink.hash)
       if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)|| navbarlink.hash=='#'  ) {
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active')
       } else {
         navbarlink.classList.remove('active')
@@ -99,25 +98,25 @@
         if (selectTopbar) {
           selectTopbar.classList.add('topbar-scrolled')
         }
-        if(selectMessageBar){
+        if (selectMessageBar) {
           selectMessageBar.classList.add('message-scrolled')
         }
 
       } else {
         selectHeader.classList.remove('header-scrolled')
-        if(selectTopbar) {
+        if (selectTopbar) {
           selectTopbar.classList.remove('topbar-scrolled')
         }
-        if(selectMessageBar){
+        if (selectMessageBar) {
           selectMessageBar.classList.remove('message-scrolled')
         }
-        
+
       }
     }
     window.addEventListener('load', headerScrolled)
     onscroll(document, headerScrolled)
   }
-  
+
   /**
    * Back to top button
    */
@@ -134,38 +133,26 @@
     onscroll(document, toggleBacktotop)
   }
 
-    /**
-   * Mobile nav toggle
-   */
-    on('click', '.mobile-nav-toggle', function(e) {
-      select('#navbar').classList.toggle('navbar-mobile')
-      this.classList.toggle('bi-list')
-      this.classList.toggle('bi-x')
-    })
-  
   /**
    * Mobile nav toggle
    */
-  console.log("Bijo")
-  on('click', '#navbar .new-page', function(e) {
-    console.log("Bijo inside new page")
-    var current = document.getElementsByClassName("active");
-    console.log("bkm",current )
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  }, true)
+  on('click', '.mobile-nav-toggle', function (e) {
+    select('#navbar').classList.toggle('navbar-mobile')
+    this.classList.toggle('bi-list')
+    this.classList.toggle('bi-x')
+  })
 
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
     }
   }, true)
 
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -183,7 +170,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -234,9 +221,9 @@
 
       let menuFilters = select('#menu-flters li', true);
 
-      on('click', '#menu-flters li', function(e) {
+      on('click', '#menu-flters li', function (e) {
         e.preventDefault();
-        menuFilters.forEach(function(el) {
+        menuFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -250,47 +237,12 @@
 
   });
 
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.events-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
 
   /**
    * Initiate gallery lightbox 
    */
   const galleryLightbox = GLightbox({
     selector: '.gallery-lightbox'
-  });
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
   });
 
 })()

@@ -147,7 +147,7 @@ h6 {
   border-radius: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: rgb(235, 227, 217);
+  color: rgb(223, 42, 136);
   text-align: center;
   opacity: 0.9;
 }
@@ -909,7 +909,7 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.contact .info h4 {
+.contact .info h3  {
   padding: 0 0 0 60px;
   font-size: 18px;
   font-weight: 600;

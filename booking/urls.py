@@ -10,4 +10,3 @@ urlpatterns = [
     path('deletebooking/<booking_id>', views.delete_mybooking,
          name='delete_mybooking'),
 ]
-

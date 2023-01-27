@@ -68,11 +68,11 @@
                     <li><a class="nav-link scrollto" aria-label="contact" href="{% url 'home' %}#contact">Contact</a></li>
                     <!-- Show signOut and booking only for authorized user -->
                     {% if user.is_authenticated %}
-                    <li><a class="nav-link scrollto new-page" aria-label="signout" href="{% url 'account_logout' %}">SignOut</a></li>
-                    <li><a class="nav-link scrollto new-page" aria-label="mybooking" href="{% url 'mybooking' %}#mybooking">My Bookings</a></li>
+                    <li><a class="nav-link  new-page" aria-label="signout" href="{% url 'account_logout' %}#signout">SignOut</a></li>
+                    <li><a class="nav-link  new-page" aria-label="mybooking" href="{% url 'mybooking' %}#mybook">My Bookings</a></li>
                     {% else %}
-                    <li><a class="nav-link scrollto new-page" aria-label="signUp" href="{% url 'account_signup' %}">SignUp</a></li>
-                    <li><a class="nav-link scrollto new-page" aria-label="signin" href="{% url 'account_login' %}">SignIn</a></li>
+                    <li><a class="nav-link  new-page" aria-label="signUp" href="{% url 'account_signup' %}#signup">SignUp</a></li>
+                    <li><a class="nav-link  new-page" aria-label="signin" href="{% url 'account_login' %}#signin">SignIn</a></li>
                     {% endif %}
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -125,7 +125,7 @@
     <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%}"></script>
     <script src="{% static 'vendor/php-email-form/validate.js'%}"></script>
     <!-- Template Main JS File -->
-    <script src="{% static  'js/main.js'%}"></script>
+    <script src="{% static  'js/main.js'%}"></script> 
     <!-- Alert messages disappear function. Credit: CI walkthrough -->
     <script>
         setTimeout(function () {
