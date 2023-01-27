@@ -99,15 +99,18 @@
         if (selectTopbar) {
           selectTopbar.classList.add('topbar-scrolled')
         }
-        selectMessageBar.classList.add('message-scrolled')
+        if(selectMessageBar){
+          selectMessageBar.classList.add('message-scrolled')
+        }
 
       } else {
         selectHeader.classList.remove('header-scrolled')
-        if (selectTopbar) {
+        if(selectTopbar) {
           selectTopbar.classList.remove('topbar-scrolled')
         }
-       
-        selectMessageBar.classList.remove('message-scrolled')
+        if(selectMessageBar){
+          selectMessageBar.classList.remove('message-scrolled')
+        }
         
       }
     }
